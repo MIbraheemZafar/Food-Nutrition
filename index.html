@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ibraheem's Nourish — Macro & Diet Tracker</title>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiSWJyYWhlZW0ncyBOb3VyaXNoIiwic2hvcnRfbmFtZSI6Ik5vdXJpc2giLCJkZXNjcmlwdGlvbiI6IlRyYWNrIG1lYWxzLCBtYWNyb3MsIGRpZXQgcGxhbnMsIGFuZCBtZWFsLXRpbWUgYWxhcm1zLiIsInN0YXJ0X3VybCI6Ii4vaW5kZXguaHRtbCIsInNjb3BlIjoiLi8iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI0ZCRjZFQyIsInRoZW1lX2NvbG9yIjoiI0ZGNkI1NyIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S0lDQThaR1ZtY3o0S0lDQWdJRHhzYVc1bFlYSkhjbUZrYVdWdWRDQnBaRDBpWnlJZ2VERTlJakFsSWlCNU1UMGlNQ1VpSUhneVBTSXhNREFsSWlCNU1qMGlNVEF3SlNJK0NpQWdJQ0FnSUR4emRHOXdJRzltWm5ObGREMGlNQ1VpSUhOMGIzQXRZMjlzYjNJOUlpTkdSalpDTlRjaUx6NEtJQ0FnSUNBZ1BITjBiM0FnYjJabWMyVjBQU0l4TURBbElpQnpkRzl3TFdOdmJHOXlQU0lqUmpKQk56RkNJaTgrQ2lBZ0lDQThMMnhwYm1WaGNrZHlZV1JwWlc1MFBnb2dJRHd2WkdWbWN6NEtJQ0E4Y21WamRDQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2NuZzlJakV4TWlJZ1ptbHNiRDBpZFhKc0tDTm5LU0l2UGdvZ0lEeDBaWGgwSUhnOUlqSTFOaUlnZVQwaU16TXdJaUJtYjI1MExYTnBlbVU5SWpJM01DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlsTmxaMjlsSUZWSklFVnRiMnBwTENCT2IzUnZJRU52Ykc5eUlFVnRiMnBwTENCQmNIQnNaU0JEYjJ4dmNpQkZiVzlxYVN3Z2MyRnVjeTF6WlhKcFppSSs4SitsbHp3dmRHVjRkRDRLUEM5emRtYysiLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCIsInB1cnBvc2UiOiJhbnkifSx7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0ExTVRJZ05URXlJajRLSUNBOFpHVm1jejRLSUNBZ0lEeHNhVzVsWVhKSGNtRmthV1Z1ZENCcFpEMGlaeUlnZURFOUlqQWxJaUI1TVQwaU1DVWlJSGd5UFNJeE1EQWxJaUI1TWowaU1UQXdKU0krQ2lBZ0lDQWdJRHh6ZEc5d0lHOW1abk5sZEQwaU1DVWlJSE4wYjNBdFkyOXNiM0k5SWlOR1JqWkNOVGNpTHo0S0lDQWdJQ0FnUEhOMGIzQWdiMlptYzJWMFBTSXhNREFsSWlCemRHOXdMV052Ykc5eVBTSWpSakpCTnpGQ0lpOCtDaUFnSUNBOEwyeHBibVZoY2tkeVlXUnBaVzUwUGdvZ0lEd3ZaR1ZtY3o0S0lDQThjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXhNaUlnWm1sc2JEMGlkWEpzS0NObktTSXZQZ29nSUR4MFpYaDBJSGc5SWpJMU5pSWdlVDBpTXpNd0lpQm1iMjUwTFhOcGVtVTlJakkzTUNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWxObFoyOWxJRlZKSUVWdGIycHBMQ0JPYjNSdklFTnZiRzl5SUVWdGIycHBMQ0JCY0hCc1pTQkRiMnh2Y2lCRmJXOXFhU3dnYzJGdWN5MXpaWEpwWmlJKzhKK2xsend2ZEdWNGRENEtQQzl6ZG1jKyIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwicHVycG9zZSI6ImFueSJ9LHsic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNEtJQ0E4WkdWbWN6NEtJQ0FnSUR4c2FXNWxZWEpIY21Ga2FXVnVkQ0JwWkQwaVp5SWdlREU5SWpBbElpQjVNVDBpTUNVaUlIZ3lQU0l4TURBbElpQjVNajBpTVRBd0pTSStDaUFnSUNBZ0lEeHpkRzl3SUc5bVpuTmxkRDBpTUNVaUlITjBiM0F0WTI5c2IzSTlJaU5HUmpaQ05UY2lMejRLSUNBZ0lDQWdQSE4wYjNBZ2IyWm1jMlYwUFNJeE1EQWxJaUJ6ZEc5d0xXTnZiRzl5UFNJalJqSkJOekZDSWk4K0NpQWdJQ0E4TDJ4cGJtVmhja2R5WVdScFpXNTBQZ29nSUR3dlpHVm1jejRLSUNBOGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1pSWdabWxzYkQwaWRYSnNLQ05uS1NJdlBnb2dJRHgwWlhoMElIZzlJakkxTmlJZ2VUMGlNek13SWlCbWIyNTBMWE5wZW1VOUlqSTNNQ0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJZ1ptOXVkQzFtWVcxcGJIazlJbE5sWjI5bElGVkpJRVZ0YjJwcExDQk9iM1J2SUVOdmJHOXlJRVZ0YjJwcExDQkJjSEJzWlNCRGIyeHZjaUJGYlc5cWFTd2djMkZ1Y3kxelpYSnBaaUkrOEorbGx6d3ZkR1Y0ZEQ0S1BDOXpkbWMrIiwic2l6ZXMiOiI1MTJ4NTEyIiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoibWFza2FibGUifV19">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjZCNTciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjJBNzFCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0idXJsKCNnKSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzMwIiBmb250LXNpemU9IjI3MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNlZ29lIFVJIEVtb2ppLCBOb3RvIENvbG9yIEVtb2ppLCBBcHBsZSBDb2xvciBFbW9qaSwgc2Fucy1zZXJpZiI+8J+llzwvdGV4dD4KPC9zdmc+">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjZCNTciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjJBNzFCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0idXJsKCNnKSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzMwIiBmb250LXNpemU9IjI3MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNlZ29lIFVJIEVtb2ppLCBOb3RvIENvbG9yIEVtb2ppLCBBcHBsZSBDb2xvciBFbW9qaSwgc2Fucy1zZXJpZiI+8J+llzwvdGV4dD4KPC9zdmc+">
+<meta name="theme-color" content="#FF6B57">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ibraheem's Nourish">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF6EC;
+    --card:#FFFFFF;
+    --ink:#2B2A24;
+    --ink-soft:#95907F;
+    --line:#EFE7D6;
+
+    --coral:#FF6B57;
+    --coral-soft:#FFE2DA;
+    --berry:#E1487B;
+    --berry-soft:#FBE0EA;
+    --honey:#F2A71B;
+    --honey-soft:#FCEBC9;
+    --sage:#6F9451;
+    --sage-soft:#E5EEDA;
+
+    --shadow:0 6px 20px rgba(43,42,36,0.07);
+    --shadow-sm:0 2px 8px rgba(43,42,36,0.06);
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:12px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    padding-bottom:92px;
+  }
+  .wrap{
+    max-width:520px;
+    margin:0 auto;
+    min-height:100vh;
+    position:relative;
+  }
+
+  /* ---------- Header ---------- */
+  header.top{
+    padding:26px 20px 18px;
+    background:linear-gradient(160deg, #FFF3E8 0%, #FFEADD 55%, #FBF6EC 100%);
+    border-radius:0 0 28px 28px;
+    box-shadow:var(--shadow-sm);
+  }
+  .brand-row{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:34px;height:34px;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--coral), var(--honey));
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;
+    box-shadow:var(--shadow-sm);
+  }
+  .brand{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:21px;
+    letter-spacing:0.2px;
+  }
+  .brand small{
+    display:block;
+    font-family:'Inter',sans-serif;
+    font-size:10.5px;
+    letter-spacing:0.6px;
+    color:var(--ink-soft);
+    font-weight:600;
+    text-transform:uppercase;
+    margin-top:1px;
+  }
+  .date-nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-top:18px;
+  }
+  .date-nav button{
+    width:32px;height:32px;
+    border:none;
+    border-radius:50%;
+    background:var(--card);
+    color:var(--ink);
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:var(--shadow-sm);
+  }
+  .date-nav button:active{transform:scale(0.92);}
+  .date-pill{
+    background:var(--card);
+    border-radius:999px;
+    padding:7px 18px;
+    box-shadow:var(--shadow-sm);
+    text-align:center;
+    min-width:150px;
+  }
+  .date-pill .dmain{
+    font-weight:700;
+    font-size:13.5px;
+  }
+  .date-pill .rel{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9px;
+    letter-spacing:1px;
+    color:var(--coral);
+    font-weight:600;
+    margin-top:1px;
+  }
+
+  /* ---------- Views ---------- */
+  .view{display:none; padding:18px 18px 30px;}
+  .view.active{display:block; animation:fadeIn .28s ease;}
+  @keyframes fadeIn{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+
+  /* ---------- Hero card (calorie ring + macro rings) ---------- */
+  .hero-card{
+    background:var(--card);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow);
+    padding:20px 20px 18px;
+    margin-bottom:18px;
+  }
+  .hero-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .hero-copy .hlabel{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .hero-copy .hval{
+    font-family:'Fredoka',sans-serif;
+    font-weight:700;
+    font-size:36px;
+    line-height:1.05;
+    margin-top:2px;
+  }
+  .hero-copy .hval.over{color:var(--coral);}
+  .hero-copy .hsub{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+  .hero-ring{position:relative; width:112px; height:112px; flex-shrink:0;}
+  .hero-ring svg{transform:rotate(0deg);}
+  .hero-ring .ring-center{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+  .hero-ring .ring-center .rpct{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:19px;
+  }
+  .hero-ring .ring-center .rtag{
+    font-size:9px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-weight:600;
+  }
+
+  .mini-rings{
+    display:flex;
+    justify-content:space-between;
+    margin-top:18px;
+    padding-top:16px;
+    border-top:1px dashed var(--line);
+  }
+  .mini-ring{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex:1;
+  }
+  .mini-ring .mr-svg{position:relative; width:46px; height:46px; flex-shrink:0;}
+  .mini-ring .mr-svg .mr-center{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px;
+  }
+  .mini-ring .mr-copy .mname{
+    font-size:10.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    color:var(--ink-soft);
+  }
+  .mini-ring .mr-copy .mnums{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    font-weight:600;
+    margin-top:1px;
+  }
+  .mini-ring .mr-copy .mnums span{color:var(--ink-soft); font-weight:500;}
+
+  /* ---------- Meal cards ---------- */
+  .meal-card{
+    background:var(--card);
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-sm);
+    padding:14px 16px 8px;
+    margin-bottom:14px;
+  }
+  .meal-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding-bottom:10px;
+  }
+  .meal-icon{
+    width:34px;height:34px;
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;
+    flex-shrink:0;
+  }
+  .meal-icon.breakfast{background:var(--honey-soft);}
+  .meal-icon.lunch{background:var(--sage-soft);}
+  .meal-icon.dinner{background:var(--berry-soft);}
+  .meal-icon.snacks{background:var(--coral-soft);}
+  .meal-titles{flex:1;}
+  .meal-titles h2{
+    margin:0;
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+  }
+  .meal-titles .mkcal{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+  .add-btn{
+    background:var(--bg);
+    border:none;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+    color:var(--coral);
+    cursor:pointer;
+    padding:7px 12px;
+  }
+  .add-btn:active{transform:scale(0.96);}
+  .entry{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 0;
+    border-top:1px solid var(--line);
+    gap:8px;
+  }
+  .entry .einfo{min-width:0; flex:1;}
+  .entry .ename{
+    font-size:13.5px;
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .entry .eqty{
+    display:block;
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+  .estepper{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:var(--bg);
+    border-radius:999px;
+    padding:3px;
+    flex-shrink:0;
+  }
+  .qbtn{
+    width:22px;height:22px;
+    border:none;
+    border-radius:50%;
+    background:var(--card);
+    color:var(--ink);
+    font-size:14px;
+    font-weight:700;
+    line-height:1;
+    cursor:pointer;
+    box-shadow:var(--shadow-sm);
+  }
+  .qbtn.qplus{color:var(--sage);}
+  .qbtn.qminus{color:var(--coral);}
+  .qbtn:active{transform:scale(0.9);}
+  .qval{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    min-width:20px;
+    text-align:center;
+  }
+  .etotals{text-align:right; flex-shrink:0;}
+  .entry .emacros{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    color:var(--ink-soft);
+    text-align:right;
+    white-space:nowrap;
+  }
+  .entry .ecal{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:700;
+    font-size:14px;
+    text-align:right;
+  }
+  .entry .edel{
+    background:var(--bg);
+    border:none;color:var(--coral);
+    width:22px;height:22px;
+    border-radius:50%;
+    font-size:14px;cursor:pointer;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .empty-meal{
+    font-size:12px;
+    color:var(--ink-soft);
+    font-style:italic;
+    padding:8px 0 12px;
+  }
+
+  /* ---------- Progress view ---------- */
+  .section-title{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    margin:0 0 12px;
+  }
+  .weight-form{
+    display:flex;
+    gap:8px;
+    margin-bottom:16px;
+  }
+  .weight-form input{
+    flex:1;
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+    padding:12px 14px;
+    border:none;
+    border-radius:var(--radius-sm);
+    background:var(--card);
+    box-shadow:var(--shadow-sm);
+  }
+  .weight-form button{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:13px;
+    background:linear-gradient(135deg, var(--coral), var(--honey));
+    color:#fff;
+    border:none;
+    padding:0 20px;
+    border-radius:var(--radius-sm);
+    cursor:pointer;
+  }
+  .chart-box{
+    background:var(--card);
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-sm);
+    padding:14px 10px 8px;
+    margin-bottom:16px;
+  }
+  .chart-box svg{display:block;width:100%;height:140px;}
+  .weight-list{margin-bottom:22px;}
+  .wrow{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:9px 4px;
+    border-bottom:1px solid var(--line);
+    font-size:13px;
+  }
+  .wrow .wkg{font-family:'IBM Plex Mono',monospace; font-weight:600;}
+  .wrow button{
+    background:none;border:none;color:var(--coral);cursor:pointer;font-size:15px;
+  }
+  .stat-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .stat-card{
+    background:var(--card);
+    border-radius:var(--radius-sm);
+    box-shadow:var(--shadow-sm);
+    padding:12px 14px;
+  }
+  .stat-card .slabel{
+    font-size:10.5px;
+    font-weight:600;
+    color:var(--ink-soft);
+  }
+  .stat-card .sval{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:20px;
+    margin-top:3px;
+  }
+  .hist-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--card);
+    border-radius:var(--radius-sm);
+    box-shadow:var(--shadow-sm);
+    padding:12px 14px;
+    margin-bottom:8px;
+    cursor:pointer;
+  }
+  .hist-row:active{transform:scale(0.98);}
+  .hist-row .hleft .hdate{font-weight:700; font-size:13.5px;}
+  .hist-row .hleft .hrel{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9.5px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    margin-top:2px;
+  }
+  .hist-row .hright{text-align:right;}
+  .hist-row .hcal{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:700;
+    font-size:13.5px;
+    color:var(--coral);
+  }
+  .hist-row .hmacros{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9.5px;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+  .hist-empty{
+    font-size:12px;
+    color:var(--ink-soft);
+    font-style:italic;
+    padding:10px 0;
+  }
+
+  /* ---------- Settings view ---------- */
+  .acct-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+  }
+  .acct-label{
+    font-size:10.5px;
+    font-weight:700;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+  }
+  .acct-email{
+    font-weight:700;
+    font-size:14px;
+    margin-top:2px;
+  }
+  .sync-dot{
+    width:10px;height:10px;
+    border-radius:50%;
+    background:var(--sage);
+    box-shadow:0 0 0 4px var(--sage-soft);
+    flex-shrink:0;
+  }
+  code{
+    background:var(--bg);
+    padding:1px 5px;
+    border-radius:4px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+  }
+  .settings-card{
+    background:var(--card);
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-sm);
+    padding:18px 18px 16px;
+    margin-bottom:16px;
+  }
+  .field{margin-bottom:14px;}
+  .field:last-child{margin-bottom:0;}
+  .field label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .field input, .field select{
+    width:100%;
+    font-family:'Inter',sans-serif;
+    font-size:14.5px;
+    padding:11px 12px;
+    border:1.5px solid var(--line);
+    background:var(--bg);
+    border-radius:var(--radius-sm);
+  }
+  .field-row{display:flex;gap:10px;}
+  .field-row .field{flex:1;}
+  .seg{
+    display:flex;
+    background:var(--bg);
+    border-radius:var(--radius-sm);
+    padding:3px;
+    gap:3px;
+  }
+  .seg button{
+    flex:1;
+    padding:9px 4px;
+    background:transparent;
+    border:none;
+    border-radius:9px;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  .seg button.active{background:var(--card); color:var(--ink); box-shadow:var(--shadow-sm);}
+  .primary-btn{
+    width:100%;
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    background:linear-gradient(135deg, var(--coral), var(--honey));
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:var(--radius-sm);
+    cursor:pointer;
+    margin-top:4px;
+  }
+  .primary-btn.secondary{
+    background:var(--ink);
+  }
+  .macro-split{
+    display:flex;
+    gap:8px;
+  }
+  .macro-split .field{flex:1;margin-bottom:0;}
+  .split-total{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-top:8px;
+  }
+  .split-total.warn{color:var(--coral);font-weight:700;}
+  .hint{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    margin:0 0 14px;
+  }
+
+  /* ---------- Diet Plan view ---------- */
+  .plan-actions{
+    display:flex;
+    gap:10px;
+    margin:4px 0 18px;
+  }
+  .plan-actions .primary-btn{margin-top:0;}
+  .plan-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--card);
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-sm);
+    padding:12px 14px;
+    margin-bottom:10px;
+  }
+  .pi-time{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:700;
+    font-size:12px;
+    color:var(--coral);
+    width:64px;
+    flex-shrink:0;
+    line-height:1.25;
+  }
+  .pi-icon{
+    width:32px;height:32px;
+    border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:15px;
+    flex-shrink:0;
+  }
+  .pi-icon.breakfast{background:var(--honey-soft);}
+  .pi-icon.lunch{background:var(--sage-soft);}
+  .pi-icon.dinner{background:var(--berry-soft);}
+  .pi-icon.snacks{background:var(--coral-soft);}
+  .pi-body{flex:1; min-width:0;}
+  .pi-name{
+    font-size:13.5px;
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .pi-sub{
+    font-size:10.5px;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+  .pi-actions{display:flex; gap:4px; flex-shrink:0;}
+  .pi-btn{
+    width:26px;height:26px;
+    border:none;
+    border-radius:50%;
+    background:var(--bg);
+    font-size:13px;
+    cursor:pointer;
+    line-height:1;
+  }
+  .pi-del{color:var(--coral);}
+  .pi-btn:active{transform:scale(0.9);}
+
+  .switch{
+    position:relative;
+    display:inline-block;
+    width:44px;height:26px;
+    flex-shrink:0;
+  }
+  .switch input{opacity:0;width:0;height:0;position:absolute;}
+  .switch .slider{
+    position:absolute;cursor:pointer;inset:0;
+    background:var(--line);
+    border-radius:999px;
+    transition:.2s;
+  }
+  .switch .slider::before{
+    content:"";
+    position:absolute;
+    height:20px;width:20px;
+    left:3px;top:3px;
+    background:#fff;
+    border-radius:50%;
+    transition:.2s;
+    box-shadow:var(--shadow-sm);
+  }
+  .switch input:checked + .slider{background:linear-gradient(135deg, var(--coral), var(--honey));}
+  .switch input:checked + .slider::before{transform:translateX(18px);}
+
+  #alarmBackdrop{align-items:center;}
+  .alarm-modal{
+    border-radius:24px;
+    text-align:center;
+    padding:30px 22px 24px;
+    max-width:340px;
+    margin:0 auto;
+  }
+  .alarm-icon{font-size:44px; margin-bottom:8px;}
+  .alarm-modal h3{justify-content:center;}
+  .alarm-btns{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+  }
+  .alarm-btns button{margin-top:0; flex:1;}
+
+  /* ---------- Tab bar ---------- */
+  nav.tabbar{
+    position:fixed;
+    bottom:14px;left:0;right:0;
+    max-width:480px;
+    margin:0 auto;
+    background:var(--ink);
+    display:flex;
+    border-radius:999px;
+    box-shadow:0 10px 28px rgba(43,42,36,0.28);
+    z-index:50;
+    padding:6px;
+    width:calc(100% - 28px);
+  }
+  nav.tabbar button{
+    flex:1;
+    background:none;
+    border:none;
+    color:#ffffff80;
+    font-family:'Inter',sans-serif;
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:0.2px;
+    text-transform:uppercase;
+    padding:9px 4px 7px;
+    cursor:pointer;
+    border-radius:999px;
+  }
+  nav.tabbar button .ic{
+    display:block;
+    font-size:17px;
+    margin-bottom:2px;
+  }
+  nav.tabbar button.active{color:#fff; background:linear-gradient(135deg, var(--coral), var(--honey));}
+
+  /* ---------- Modal ---------- */
+  .modal-backdrop{
+    position:fixed;inset:0;
+    background:#2B2A24aa;
+    display:none;
+    align-items:flex-end;
+    justify-content:center;
+    z-index:100;
+  }
+  .modal-backdrop.active{display:flex;}
+  .modal{
+    background:var(--bg);
+    width:100%;
+    max-width:520px;
+    max-height:86vh;
+    overflow-y:auto;
+    padding:10px 20px 26px;
+    border-radius:24px 24px 0 0;
+  }
+  .modal-handle{
+    width:40px;height:4px;
+    background:var(--line);
+    border-radius:4px;
+    margin:0 auto 14px;
+  }
+  .modal h3{
+    font-family:'Fredoka',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    margin:0 0 14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .modal h3 .close{
+    font-weight:400;
+    font-size:22px;
+    cursor:pointer;
+    color:var(--ink-soft);
+    width:28px;height:28px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--card);
+    border-radius:50%;
+  }
+  .quick-list{margin-bottom:6px;}
+  .quick-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--card);
+    padding:11px 12px;
+    border-radius:var(--radius-sm);
+    margin-bottom:8px;
+    cursor:pointer;
+    box-shadow:var(--shadow-sm);
+  }
+  .quick-item:active{transform:scale(0.98);}
+  .quick-item .qname{font-size:13.5px;font-weight:600;}
+  .quick-item .qsub{
+    font-size:10.5px;
+    color:var(--ink-soft);
+    margin-top:1px;
+  }
+  .quick-item .qcal{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    font-weight:700;
+    color:var(--coral);
+  }
+  .divider-label{
+    font-size:10.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color:var(--ink-soft);
+    text-align:center;
+    margin:18px 0 14px;
+    position:relative;
+  }
+  .divider-label::before,.divider-label::after{
+    content:"";
+    display:inline-block;
+    width:26%;
+    height:1px;
+    background:var(--line);
+    vertical-align:middle;
+    margin:0 8px;
+  }
+  .custom-card{
+    background:var(--card);
+    border-radius:var(--radius-md);
+    padding:16px;
+    box-shadow:var(--shadow-sm);
+  }
+  .toast{
+    position:fixed;
+    bottom:104px;left:50%;
+    transform:translateX(-50%);
+    background:var(--ink);
+    color:#fff;
+    font-size:12.5px;
+    font-weight:600;
+    padding:11px 20px;
+    border-radius:999px;
+    z-index:200;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  }
+  .toast.show{opacity:1;}
+</style>
+<!-- Firebase (used for optional cloud sync — see FIREBASE_CONFIG in the script below) -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand-mark">🥗</div>
+      <div class="brand">Ibraheem's Nourish<small>Macro &amp; Diet Tracker</small></div>
+    </div>
+    <div class="date-nav">
+      <button id="prevDay">‹</button>
+      <div class="date-pill"><div class="dmain" id="dateLabel">—</div><span class="rel" id="dateRel"></span></div>
+      <button id="nextDay">›</button>
+    </div>
+  </header>
+
+  <!-- ===== DIARY VIEW ===== -->
+  <section class="view active" id="view-diary">
+    <div class="hero-card" id="factsPanel"></div>
+    <div id="mealsContainer"></div>
+  </section>
+
+  <!-- ===== PROGRESS VIEW ===== -->
+  <section class="view" id="view-progress">
+    <div class="section-title">Weight Log</div>
+    <form class="weight-form" id="weightForm">
+      <input type="number" step="0.1" id="weightInput" placeholder="Log today's weight (kg)" required>
+      <button type="submit">Save</button>
+    </form>
+    <div class="chart-box"><svg id="weightChart" viewBox="0 0 300 140" preserveAspectRatio="none"></svg></div>
+    <div class="weight-list" id="weightList"></div>
+
+    <div class="section-title">This Week</div>
+    <div class="stat-grid" id="weekStats"></div>
+
+    <div class="section-title">Food Diary History</div>
+    <div class="hint">Every day you've logged food, most recent first. Tap a day to open it in the Diary.</div>
+    <div id="historyList"></div>
+  </section>
+
+  <!-- ===== SETTINGS VIEW ===== -->
+  <section class="view" id="view-settings">
+    <div class="section-title">Account &amp; Sync</div>
+    <div class="settings-card" id="accountCard">
+      <div id="accountLoggedOut">
+        <div class="hint" id="syncStatusHint" style="margin-bottom:12px;">Checking sync status…</div>
+        <button class="primary-btn" id="openLoginBtn" type="button">Sign In / Create Account</button>
+      </div>
+      <div id="accountLoggedIn" style="display:none;">
+        <div class="acct-row">
+          <div>
+            <div class="acct-label">Signed in as</div>
+            <div class="acct-email" id="acctEmail">—</div>
+          </div>
+          <span class="sync-dot"></span>
+        </div>
+        <button class="primary-btn secondary" id="signOutBtn" type="button">Sign Out</button>
+      </div>
+    </div>
+
+    <div class="section-title">Your Profile</div>
+    <div class="settings-card">
+      <div class="field-row">
+        <div class="field">
+          <label>Sex</label>
+          <div class="seg" id="sexSeg">
+            <button data-v="female" type="button">Female</button>
+            <button data-v="male" type="button">Male</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="30">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Height (cm)</label>
+          <input type="number" id="height" placeholder="170">
+        </div>
+        <div class="field">
+          <label>Weight (kg)</label>
+          <input type="number" step="0.1" id="weightNow" placeholder="70">
+        </div>
+      </div>
+      <div class="field">
+        <label>Activity Level</label>
+        <select id="activity">
+          <option value="1.2">Sedentary — little/no exercise</option>
+          <option value="1.375">Light — 1-3 days/week</option>
+          <option value="1.55" selected>Moderate — 3-5 days/week</option>
+          <option value="1.725">Active — 6-7 days/week</option>
+          <option value="1.9">Very Active — physical job / 2x day</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Goal</label>
+        <div class="seg" id="goalSeg">
+          <button data-v="lose" type="button">Lose</button>
+          <button data-v="maintain" type="button">Maintain</button>
+          <button data-v="gain" type="button">Gain</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Macro Split</div>
+    <div class="settings-card">
+      <div class="hint" style="margin-bottom:12px;">Percent of daily calories. Should add to 100% — defaults to a balanced 30/40/30 split.</div>
+      <div class="macro-split">
+        <div class="field"><label>Protein %</label><input type="number" id="pctProtein" value="30"></div>
+        <div class="field"><label>Carbs %</label><input type="number" id="pctCarbs" value="40"></div>
+        <div class="field"><label>Fat %</label><input type="number" id="pctFat" value="30"></div>
+      </div>
+      <div class="split-total" id="splitTotal">Total: 100%</div>
+      <button class="primary-btn" id="calcBtn" type="button">Calculate My Targets</button>
+    </div>
+
+    <div class="section-title">Daily Targets</div>
+    <div class="settings-card">
+      <div class="field-row">
+        <div class="field"><label>Calories</label><input type="number" id="tCal"></div>
+        <div class="field"><label>Protein (g)</label><input type="number" id="tProtein"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Carbs (g)</label><input type="number" id="tCarbs"></div>
+        <div class="field"><label>Fat (g)</label><input type="number" id="tFat"></div>
+      </div>
+      <div class="hint" style="margin-top:12px;">You can also type targets directly — Calculate My Targets will overwrite them.</div>
+      <button class="primary-btn secondary" id="saveTargetsBtn" type="button">Save Targets</button>
+    </div>
+  </section>
+
+  <!-- ===== DIET PLAN VIEW ===== -->
+  <section class="view" id="view-plan">
+    <div class="section-title">Diet Plan &amp; Alarms</div>
+    <div class="settings-card" id="planAlarmCard">
+      <div class="acct-row">
+        <div>
+          <div class="acct-label">Meal Alarms</div>
+          <div class="hint" id="alarmStatusHint" style="margin:2px 0 0;">Off — enable to get notified at meal times.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="alarmToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="hint" style="margin-top:10px;">Alarms ring with sound + a popup while this page stays open in your browser (the tab can be in the background, but not fully closed). Want a real phone alarm too? Just ask me in chat and I can set one for these times.</div>
+    </div>
+
+    <div class="plan-actions">
+      <button class="primary-btn" id="genPlanBtn" type="button">✨ Auto-generate plan</button>
+      <button class="primary-btn secondary" id="addPlanBtn" type="button">＋ Add manually</button>
+    </div>
+
+    <div class="hero-card" id="planSummary"></div>
+    <div class="section-title">Today's Schedule</div>
+    <div id="planList"></div>
+  </section>
+
+  <nav class="tabbar">
+    <button class="tab active" data-view="diary"><span class="ic">📔</span>Diary</button>
+    <button class="tab" data-view="plan"><span class="ic">⏰</span>Plan</button>
+    <button class="tab" data-view="add" id="tabAdd"><span class="ic">➕</span>Add</button>
+    <button class="tab" data-view="progress"><span class="ic">📈</span>Progress</button>
+    <button class="tab" data-view="settings"><span class="ic">⚙️</span>Settings</button>
+  </nav>
+</div>
+
+<!-- ===== ADD FOOD MODAL ===== -->
+<div class="modal-backdrop" id="addBackdrop">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <h3>Add to <span id="mealTargetLabel">Breakfast</span><span class="close" id="closeAdd">×</span></h3>
+
+    <div class="field">
+      <input type="text" id="foodSearch" placeholder="🔍 Search common foods (chicken, oats, banana...)">
+    </div>
+    <div class="quick-list" id="quickList"></div>
+
+    <div class="divider-label">or log custom food</div>
+    <div class="custom-card">
+      <div class="field"><label>Food name</label><input type="text" id="cName" placeholder="e.g. Homemade curry"></div>
+      <div class="field-row">
+        <div class="field"><label>Quantity</label><input type="number" step="any" id="cQty" value="1"></div>
+        <div class="field"><label>Unit</label><input type="text" id="cUnit" value="serving"></div>
+      </div>
+      <div class="hint">Enter macros for the amount above (not per 100g) — e.g. if quantity is "2 slices", enter macros for 2 slices.</div>
+      <div class="field-row">
+        <div class="field"><label>Calories</label><input type="number" id="cCal"></div>
+        <div class="field"><label>Protein (g)</label><input type="number" id="cProtein"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Carbs (g)</label><input type="number" id="cCarbs"></div>
+        <div class="field"><label>Fat (g)</label><input type="number" id="cFat"></div>
+      </div>
+      <button class="primary-btn" id="addCustomBtn" type="button">Add to Diary</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LOGIN MODAL ===== -->
+<div class="modal-backdrop" id="loginBackdrop">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <h3>Sync Your Diary<span class="close" id="closeLogin">×</span></h3>
+    <div class="hint" id="loginSetupHint" style="display:none;">
+      Cloud sync isn't configured yet. Open this file's HTML and fill in <code>FIREBASE_CONFIG</code> near the top of the &lt;script&gt; with your own free Firebase project keys — see the comment right above it for step-by-step instructions.
+    </div>
+    <div id="loginFormWrap">
+      <div class="custom-card">
+        <div class="field"><label>Email</label><input type="email" id="loginEmail" placeholder="you@example.com"></div>
+        <div class="field"><label>Password</label><input type="password" id="loginPassword" placeholder="At least 6 characters"></div>
+        <div class="hint" id="loginError" style="display:none; color:var(--coral); font-weight:600;"></div>
+        <button class="primary-btn" id="signInBtn" type="button">Sign In</button>
+        <button class="primary-btn secondary" id="signUpBtn" type="button" style="margin-top:8px;">Create Account</button>
+        <div class="hint" style="margin-top:12px;">Use the same email &amp; password on every device to see the same diary everywhere.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PLAN ITEM MODAL ===== -->
+<div class="modal-backdrop" id="planBackdrop">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <h3><span>Add Plan Item</span><span class="close" id="closePlan">×</span></h3>
+
+    <div class="field-row">
+      <div class="field">
+        <label>Meal</label>
+        <select id="planMeal">
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snacks</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Time</label>
+        <input type="time" id="planTime" value="08:00">
+      </div>
+    </div>
+
+    <div class="field">
+      <input type="text" id="planFoodSearch" placeholder="🔍 Search common foods (chicken, oats, banana...)">
+    </div>
+    <div class="quick-list" id="planQuickList"></div>
+
+    <div class="divider-label">or custom item</div>
+    <div class="custom-card">
+      <div class="field"><label>Food / item name</label><input type="text" id="pName" placeholder="e.g. Oatmeal with banana"></div>
+      <div class="field-row">
+        <div class="field"><label>Quantity</label><input type="number" step="any" id="pQty" value="1"></div>
+        <div class="field"><label>Unit</label><input type="text" id="pUnit" value="serving"></div>
+      </div>
+      <div class="hint">Enter macros for the amount above (not per 100g) — e.g. if quantity is "2 slices", enter macros for 2 slices.</div>
+      <div class="field-row">
+        <div class="field"><label>Calories</label><input type="number" id="pCal"></div>
+        <div class="field"><label>Protein (g)</label><input type="number" id="pProtein"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Carbs (g)</label><input type="number" id="pCarbs"></div>
+        <div class="field"><label>Fat (g)</label><input type="number" id="pFat"></div>
+      </div>
+      <button class="primary-btn" id="savePlanItemBtn" type="button">Save to Plan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ALARM RING MODAL ===== -->
+<div class="modal-backdrop" id="alarmBackdrop">
+  <div class="modal alarm-modal">
+    <div class="alarm-icon">⏰</div>
+    <h3 id="alarmTitle">Meal Time!</h3>
+    <div class="hint" id="alarmSub"></div>
+    <div class="alarm-btns">
+      <button class="primary-btn secondary" id="alarmSnoozeBtn" type="button">Snooze 10 min</button>
+      <button class="primary-btn" id="alarmDismissBtn" type="button">Dismiss</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   CLOUD SYNC SETUP (optional) — Firebase (free tier)
+   ============================================================
+   To sync your diary across devices:
+   1. Go to https://console.firebase.google.com → Add project (free, no card needed).
+   2. In your new project: Build → Authentication → Get Started → enable
+      "Email/Password" sign-in method.
+   3. Build → Firestore Database → Create database → start in PRODUCTION mode,
+      pick any region.
+   4. In Firestore → Rules tab, replace the rules with this and Publish:
+        rules_version = '2';
+        service cloud.firestore {
+          match /databases/{database}/documents {
+            match /users/{uid}/kv/{docId} {
+              allow read, write: if request.auth != null && request.auth.uid == uid;
+            }
+          }
+        }
+   5. Project settings (gear icon) → General → scroll to "Your apps" → Add app
+      → Web (</>) → register it → copy the firebaseConfig object it gives you.
+   6. Paste those 6 values into FIREBASE_CONFIG below, replacing the placeholders.
+   7. Save this file, reopen it, tap Settings → Sign In / Create Account.
+      Use the same email + password on every device to see the same diary.
+
+   If you skip all this, the app still works fully — it just saves to this
+   browser only (localStorage), same as before.
+   ============================================================ */
+const FIREBASE_CONFIG = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const FIREBASE_READY = FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.apiKey.indexOf("YOUR_")!==0;
+let fbAuth = null, fbDb = null, fbUser = null;
+if(FIREBASE_READY){
+  try{
+    firebase.initializeApp(FIREBASE_CONFIG);
+    fbAuth = firebase.auth();
+    fbDb = firebase.firestore();
+  }catch(e){ console.error("Firebase init failed", e); }
+}
+
+/* ============ STORAGE LAYER ============ */
+/* Priority: Firestore (when signed in) > Claude artifact storage (in-chat preview)
+   > browser localStorage (always-on fallback, persists on this device/browser). */
+const LS_PREFIX = "nourish:";
+
+async function sGet(key){
+  if(fbDb && fbUser){
+    try{
+      const doc = await fbDb.collection("users").doc(fbUser.uid).collection("kv").doc(fbKeyId(key)).get();
+      if(doc.exists) return JSON.parse(doc.data().value);
+    }catch(e){ console.error("Firestore get failed", e); }
+  }
+  try{
+    if (window.storage){
+      const r = await window.storage.get(key, false);
+      return r ? JSON.parse(r.value) : null;
+    }
+  }catch(e){ /* not found in artifact storage, fall through */ }
+  try{
+    const raw = localStorage.getItem(LS_PREFIX+key);
+    return raw ? JSON.parse(raw) : null;
+  }catch(e){ return null; }
+}
+async function sSet(key, value){
+  const json = JSON.stringify(value);
+  if(fbDb && fbUser){
+    try{
+      await fbDb.collection("users").doc(fbUser.uid).collection("kv").doc(fbKeyId(key)).set({key, value:json});
+    }catch(e){ console.error("Firestore set failed", e); }
+  }
+  try{
+    if (window.storage){ await window.storage.set(key, json, false); }
+  }catch(e){ /* ignore */ }
+  try{ localStorage.setItem(LS_PREFIX+key, json); }catch(e){ /* storage unavailable/full */ }
+}
+async function sList(prefix){
+  const keys = new Set();
+  if(fbDb && fbUser){
+    try{
+      const snap = await fbDb.collection("users").doc(fbUser.uid).collection("kv")
+        .where("key", ">=", prefix).where("key", "<", prefix+"\uf8ff").get();
+      snap.forEach(d=>keys.add(d.data().key));
+      if(keys.size>0) return Array.from(keys);
+    }catch(e){ console.error("Firestore list failed", e); }
+  }
+  try{
+    if (window.storage){
+      const r = await window.storage.list(prefix, false);
+      if(r && r.keys) r.keys.forEach(k=>keys.add(k));
+    }
+  }catch(e){ /* ignore */ }
+  try{
+    for(let i=0;i<localStorage.length;i++){
+      const k = localStorage.key(i);
+      if(k && k.startsWith(LS_PREFIX+prefix)) keys.add(k.slice(LS_PREFIX.length));
+    }
+  }catch(e){ /* ignore */ }
+  return Array.from(keys);
+}
+function fbKeyId(key){
+  // Firestore doc IDs can't contain "/" — our keys never do, but sanitize defensively.
+  return key.replace(/\//g, "_");
+}
+
+/* ============ ONE-TIME LOCAL → CLOUD MIGRATION ============ */
+async function migrateLocalToCloud(){
+  if(!(fbDb && fbUser)) return;
+  try{
+    const already = await fbDb.collection("users").doc(fbUser.uid).collection("kv").doc("profile").get();
+    if(already.exists) return; // cloud already has data, don't overwrite
+  }catch(e){ return; }
+  const localKeys = [];
+  try{
+    for(let i=0;i<localStorage.length;i++){
+      const k = localStorage.key(i);
+      if(k && k.startsWith(LS_PREFIX)) localKeys.push(k.slice(LS_PREFIX.length));
+    }
+  }catch(e){ return; }
+  for(const key of localKeys){
+    try{
+      const raw = localStorage.getItem(LS_PREFIX+key);
+      if(raw){
+        await fbDb.collection("users").doc(fbUser.uid).collection("kv").doc(fbKeyId(key)).set({key, value:raw});
+      }
+    }catch(e){ /* skip this key */ }
+  }
+  if(localKeys.length) showToast("Local diary synced to your account");
+}
+
+
+/* ============ COMMON FOODS DATABASE (per stated serving) ============ */
+const FOOD_DB = [
+  {name:"Chicken breast, cooked", unit:"100 g", cal:165, p:31, c:0, f:3.6},
+  {name:"Egg, large", unit:"1 egg", cal:72, p:6.3, c:0.4, f:4.8},
+  {name:"White rice, cooked", unit:"1 cup", cal:205, p:4.3, c:45, f:0.4},
+  {name:"Brown rice, cooked", unit:"1 cup", cal:216, p:5, c:45, f:1.8},
+  {name:"Oats, dry", unit:"40 g", cal:150, p:5.3, c:27, f:2.6},
+  {name:"Banana", unit:"1 medium", cal:105, p:1.3, c:27, f:0.4},
+  {name:"Apple", unit:"1 medium", cal:95, p:0.5, c:25, f:0.3},
+  {name:"Greek yogurt, plain", unit:"170 g", cal:100, p:17, c:6, f:0.7},
+  {name:"Almonds", unit:"28 g (23 nuts)", cal:164, p:6, c:6, f:14},
+  {name:"Peanut butter", unit:"2 tbsp", cal:190, p:8, c:7, f:16},
+  {name:"Salmon, cooked", unit:"100 g", cal:208, p:20, c:0, f:13},
+  {name:"Broccoli, steamed", unit:"1 cup", cal:55, p:3.7, c:11, f:0.6},
+  {name:"Sweet potato, baked", unit:"1 medium", cal:103, p:2.3, c:24, f:0.2},
+  {name:"Whole wheat bread", unit:"1 slice", cal:81, p:4, c:14, f:1.1},
+  {name:"Avocado", unit:"1/2 fruit", cal:120, p:1.5, c:6, f:11},
+  {name:"Milk, 2%", unit:"1 cup", cal:122, p:8, c:12, f:4.8},
+  {name:"Ground beef 90/10, cooked", unit:"100 g", cal:176, p:20, c:0, f:10},
+  {name:"Black beans, cooked", unit:"1 cup", cal:227, p:15, c:41, f:0.9},
+  {name:"Olive oil", unit:"1 tbsp", cal:119, p:0, c:0, f:13.5},
+  {name:"Cottage cheese, low-fat", unit:"1 cup", cal:163, p:28, c:6, f:2.3},
+  {name:"Protein shake", unit:"1 scoop + water", cal:120, p:24, c:3, f:1.5},
+  {name:"Pasta, cooked", unit:"1 cup", cal:221, p:8, c:43, f:1.3},
+  {name:"Tortilla, flour", unit:"1 medium", cal:146, p:4, c:24, f:3.5},
+  {name:"Orange", unit:"1 medium", cal:62, p:1.2, c:15, f:0.2},
+  {name:"Tuna, canned in water", unit:"100 g", cal:116, p:26, c:0, f:0.8},
+
+  {name:"Turkey breast, cooked", unit:"100 g", cal:135, p:30, c:0, f:1},
+  {name:"Pork chop, cooked", unit:"100 g", cal:231, p:27, c:0, f:13},
+  {name:"Shrimp, cooked", unit:"100 g", cal:99, p:24, c:0.2, f:0.3},
+  {name:"Tofu, firm", unit:"100 g", cal:144, p:15, c:3, f:8},
+  {name:"Bacon", unit:"2 slices", cal:90, p:6, c:0.3, f:7},
+  {name:"Ham, sliced", unit:"2 slices", cal:60, p:8, c:1, f:2.5},
+  {name:"Egg whites", unit:"1/2 cup", cal:63, p:13, c:0.9, f:0.2},
+  {name:"Lentils, cooked", unit:"1 cup", cal:230, p:18, c:40, f:0.8},
+  {name:"Chickpeas, cooked", unit:"1 cup", cal:269, p:15, c:45, f:4.3},
+  {name:"Edamame", unit:"1 cup", cal:189, p:17, c:15, f:8},
+  {name:"Quinoa, cooked", unit:"1 cup", cal:222, p:8, c:39, f:3.6},
+
+  {name:"Whole wheat pasta, cooked", unit:"1 cup", cal:174, p:7.5, c:37, f:0.8},
+  {name:"Bagel, plain", unit:"1 medium", cal:277, p:11, c:55, f:1.5},
+  {name:"White bread", unit:"1 slice", cal:75, p:2.6, c:14, f:1},
+  {name:"Corn tortilla", unit:"1 medium", cal:52, p:1.4, c:11, f:0.6},
+  {name:"Cereal, corn flakes", unit:"1 cup", cal:100, p:2, c:24, f:0.2},
+  {name:"Granola", unit:"1/2 cup", cal:298, p:8, c:39, f:12},
+  {name:"Popcorn, air-popped", unit:"3 cups", cal:93, p:3, c:19, f:1.1},
+  {name:"Crackers, whole grain", unit:"10 crackers", cal:130, p:2.5, c:20, f:4.5},
+  {name:"Rice cakes", unit:"2 cakes", cal:70, p:1.4, c:15, f:0.6},
+  {name:"Couscous, cooked", unit:"1 cup", cal:176, p:6, c:36, f:0.3},
+
+  {name:"Spinach, raw", unit:"2 cups", cal:14, p:1.7, c:2.2, f:0.2},
+  {name:"Kale, raw", unit:"2 cups", cal:66, p:4.3, c:13, f:0.9},
+  {name:"Carrots, raw", unit:"1 cup", cal:52, p:1.2, c:12, f:0.3},
+  {name:"Bell pepper", unit:"1 medium", cal:24, p:1, c:6, f:0.2},
+  {name:"Cucumber", unit:"1 cup", cal:16, p:0.7, c:3.8, f:0.1},
+  {name:"Tomato", unit:"1 medium", cal:22, p:1.1, c:4.8, f:0.2},
+  {name:"Green beans, steamed", unit:"1 cup", cal:44, p:2.4, c:10, f:0.4},
+  {name:"Cauliflower, steamed", unit:"1 cup", cal:29, p:2.3, c:5.3, f:0.6},
+  {name:"Zucchini, cooked", unit:"1 cup", cal:27, p:2, c:5, f:0.4},
+  {name:"Mixed salad greens", unit:"2 cups", cal:18, p:1.4, c:3.4, f:0.2},
+  {name:"Potato, baked (with skin)", unit:"1 medium", cal:161, p:4.3, c:37, f:0.2},
+  {name:"Corn, cooked", unit:"1 cup", cal:143, p:5.4, c:31, f:2.2},
+
+  {name:"Strawberries", unit:"1 cup", cal:49, p:1, c:12, f:0.5},
+  {name:"Blueberries", unit:"1 cup", cal:84, p:1.1, c:21, f:0.5},
+  {name:"Grapes", unit:"1 cup", cal:104, p:1.1, c:27, f:0.2},
+  {name:"Mango", unit:"1 cup, sliced", cal:99, p:1.4, c:25, f:0.6},
+  {name:"Pineapple", unit:"1 cup", cal:82, p:0.9, c:22, f:0.2},
+  {name:"Watermelon", unit:"1 cup", cal:46, p:0.9, c:11.5, f:0.2},
+  {name:"Pear", unit:"1 medium", cal:101, p:0.6, c:27, f:0.2},
+  {name:"Peach", unit:"1 medium", cal:59, p:1.4, c:14, f:0.4},
+  {name:"Raisins", unit:"1/4 cup", cal:123, p:1.3, c:33, f:0.2},
+  {name:"Dates", unit:"3 dates", cal:200, p:1.6, c:54, f:0.2},
+
+  {name:"Cheddar cheese", unit:"1 slice (28g)", cal:113, p:7, c:0.4, f:9},
+  {name:"Mozzarella cheese, part-skim", unit:"28 g", cal:72, p:6.9, c:0.8, f:4.5},
+  {name:"Parmesan, grated", unit:"2 tbsp", cal:43, p:3.8, c:0.4, f:2.9},
+  {name:"Butter", unit:"1 tbsp", cal:102, p:0.1, c:0, f:11.5},
+  {name:"Whole milk", unit:"1 cup", cal:149, p:7.7, c:11.7, f:8},
+  {name:"Almond milk, unsweetened", unit:"1 cup", cal:39, p:1.5, c:3.4, f:2.5},
+  {name:"Ice cream, vanilla", unit:"1/2 cup", cal:137, p:2.3, c:16, f:7.3},
+  {name:"Yogurt, low-fat fruit", unit:"170 g", cal:150, p:6, c:28, f:1.5},
+
+  {name:"Walnuts", unit:"28 g (14 halves)", cal:185, p:4.3, c:3.9, f:18.5},
+  {name:"Cashews", unit:"28 g (18 nuts)", cal:157, p:5.2, c:8.6, f:12.4},
+  {name:"Chia seeds", unit:"1 tbsp", cal:58, p:2, c:5, f:3.7},
+  {name:"Hummus", unit:"2 tbsp", cal:70, p:2, c:6, f:5},
+  {name:"Dark chocolate, 70%", unit:"28 g", cal:170, p:2.2, c:13, f:12},
+  {name:"Protein bar", unit:"1 bar", cal:200, p:20, c:22, f:7},
+  {name:"Trail mix", unit:"1/4 cup", cal:173, p:5, c:16, f:11},
+
+  {name:"Pizza, cheese", unit:"1 slice", cal:285, p:12, c:36, f:10},
+  {name:"Cheeseburger", unit:"1 sandwich", cal:535, p:30, c:40, f:27},
+  {name:"French fries", unit:"medium (117g)", cal:365, p:4, c:48, f:17},
+  {name:"Chicken burrito", unit:"1 burrito", cal:520, p:27, c:65, f:17},
+  {name:"Sushi roll, California", unit:"8 pieces", cal:255, p:9, c:38, f:7},
+  {name:"Caesar salad, with chicken", unit:"1 bowl", cal:470, p:35, c:15, f:30},
+  {name:"Instant noodles", unit:"1 package", cal:380, p:8, c:51, f:15},
+  {name:"Sandwich, turkey & cheese", unit:"1 sandwich", cal:400, p:24, c:40, f:15},
+
+  {name:"Black coffee", unit:"1 cup", cal:2, p:0.3, c:0, f:0},
+  {name:"Latte, whole milk", unit:"12 oz", cal:170, p:9, c:13, f:9},
+  {name:"Orange juice", unit:"1 cup", cal:112, p:1.7, c:26, f:0.5},
+  {name:"Soda, cola", unit:"12 oz can", cal:140, p:0, c:39, f:0},
+  {name:"Beer, regular", unit:"12 oz", cal:153, p:1.6, c:13, f:0},
+  {name:"Red wine", unit:"5 oz glass", cal:125, p:0.1, c:4, f:0},
+  {name:"Protein powder, whey", unit:"1 scoop (30g)", cal:120, p:24, c:3, f:1.5},
+
+  // Pakistani / South Asian
+  {name:"Chicken biryani", unit:"1 cup", cal:365, p:20, c:42, f:12},
+  {name:"Beef biryani", unit:"1 cup", cal:390, p:22, c:40, f:15},
+  {name:"Chicken karahi", unit:"1 cup", cal:320, p:26, c:8, f:20},
+  {name:"Chicken tikka", unit:"3 pieces (100g)", cal:210, p:28, c:2, f:10},
+  {name:"Seekh kebab, beef", unit:"2 kebabs", cal:260, p:20, c:3, f:18},
+  {name:"Chapli kebab", unit:"1 kebab", cal:280, p:18, c:6, f:20},
+  {name:"Nihari, beef", unit:"1 cup", cal:350, p:24, c:10, f:24},
+  {name:"Haleem", unit:"1 cup", cal:300, p:18, c:30, f:12},
+  {name:"Daal chawal (lentils & rice)", unit:"1 bowl", cal:340, p:13, c:60, f:6},
+  {name:"Chana masala", unit:"1 cup", cal:270, p:12, c:40, f:8},
+  {name:"Aloo gosht (potato beef curry)", unit:"1 cup", cal:310, p:20, c:16, f:18},
+  {name:"Palak paneer", unit:"1 cup", cal:300, p:14, c:12, f:22},
+  {name:"Chicken korma", unit:"1 cup", cal:340, p:22, c:10, f:24},
+  {name:"Butter chicken", unit:"1 cup", cal:380, p:24, c:12, f:26},
+  {name:"Chicken tikka masala", unit:"1 cup", cal:350, p:25, c:14, f:22},
+  {name:"Keema (minced beef curry)", unit:"1 cup", cal:320, p:22, c:8, f:22},
+  {name:"Saag (mustard greens)", unit:"1 cup", cal:150, p:6, c:12, f:9},
+  {name:"Dal makhani", unit:"1 cup", cal:280, p:11, c:28, f:14},
+  {name:"Kabuli pulao", unit:"1 cup", cal:330, p:12, c:52, f:9},
+  {name:"Vegetable pulao", unit:"1 cup", cal:260, p:6, c:48, f:6},
+  {name:"Roti / chapati", unit:"1 piece", cal:120, p:3.5, c:22, f:2.5},
+  {name:"Naan", unit:"1 piece", cal:262, p:9, c:45, f:5},
+  {name:"Paratha, plain", unit:"1 piece", cal:260, p:6, c:32, f:12},
+  {name:"Aloo paratha", unit:"1 piece", cal:300, p:6, c:40, f:13},
+  {name:"Samosa, vegetable", unit:"1 piece", cal:150, p:3, c:18, f:8},
+  {name:"Pakora, vegetable", unit:"5 pieces", cal:200, p:5, c:22, f:11},
+  {name:"Raita (yogurt salad)", unit:"1/2 cup", cal:70, p:3, c:6, f:3.5},
+  {name:"Kheer (rice pudding)", unit:"1/2 cup", cal:180, p:4, c:28, f:6},
+  {name:"Gulab jamun", unit:"1 piece", cal:150, p:2, c:20, f:7},
+  {name:"Lassi, sweet", unit:"1 glass (250ml)", cal:220, p:6, c:34, f:7},
+  {name:"Chai (milk tea)", unit:"1 cup", cal:100, p:3, c:14, f:4},
+  {name:"Momos, chicken", unit:"6 pieces", cal:280, p:14, c:36, f:9},
+  {name:"Vindaloo, chicken", unit:"1 cup", cal:320, p:24, c:12, f:20},
+
+  // East / Southeast Asian
+  {name:"Pad Thai, chicken", unit:"1 plate", cal:450, p:22, c:56, f:16},
+  {name:"Fried rice, chicken", unit:"1 cup", cal:330, p:12, c:45, f:11},
+  {name:"Egg fried rice", unit:"1 cup", cal:290, p:8, c:44, f:9},
+  {name:"Chow mein, chicken", unit:"1 cup", cal:280, p:14, c:35, f:10},
+  {name:"Dumplings, pork (steamed)", unit:"6 pieces", cal:300, p:14, c:32, f:13},
+  {name:"Spring roll, vegetable (fried)", unit:"2 rolls", cal:200, p:4, c:24, f:10},
+  {name:"Ramen, pork broth", unit:"1 bowl", cal:500, p:24, c:60, f:18},
+  {name:"Miso soup", unit:"1 cup", cal:40, p:3, c:4, f:1.5},
+  {name:"Kung Pao chicken", unit:"1 cup", cal:340, p:24, c:16, f:20},
+  {name:"Sweet and sour chicken", unit:"1 cup", cal:400, p:20, c:44, f:16},
+  {name:"General Tso's chicken", unit:"1 cup", cal:430, p:20, c:40, f:22},
+  {name:"Pho, beef", unit:"1 bowl", cal:400, p:25, c:55, f:8},
+  {name:"Bibimbap, beef", unit:"1 bowl", cal:520, p:26, c:66, f:16},
+  {name:"Kimchi", unit:"1/2 cup", cal:23, p:1.5, c:4, f:0.3},
+  {name:"Teriyaki chicken", unit:"1 cup", cal:340, p:28, c:22, f:14},
+  {name:"Tom yum soup", unit:"1 bowl", cal:110, p:10, c:8, f:4},
+  {name:"Thai green curry, chicken", unit:"1 cup", cal:360, p:20, c:12, f:26},
+  {name:"Satay chicken skewers", unit:"3 skewers", cal:260, p:24, c:8, f:15},
+  {name:"Bao bun, pork", unit:"1 bun", cal:220, p:9, c:30, f:7},
+  {name:"Char siu pork", unit:"100 g", cal:280, p:22, c:12, f:16},
+  {name:"Hot and sour soup", unit:"1 bowl", cal:120, p:7, c:11, f:5},
+  {name:"Edamame, salted", unit:"1 cup", cal:189, p:17, c:15, f:8},
+  {name:"California roll (sushi)", unit:"8 pieces", cal:255, p:9, c:38, f:7},
+  {name:"Salmon nigiri", unit:"2 pieces", cal:90, p:7, c:12, f:2},
+
+  // Middle Eastern / Mediterranean
+  {name:"Falafel", unit:"4 pieces", cal:280, p:10, c:30, f:14},
+  {name:"Shawarma, chicken", unit:"1 wrap", cal:450, p:28, c:40, f:20},
+  {name:"Hummus with pita", unit:"1 serving", cal:250, p:8, c:32, f:11},
+  {name:"Tabbouleh", unit:"1 cup", cal:120, p:3, c:16, f:6},
+  {name:"Baba ganoush", unit:"1/4 cup", cal:60, p:1.5, c:6, f:4},
+  {name:"Kebab, lamb (grilled)", unit:"100 g", cal:250, p:24, c:0, f:17},
+  {name:"Kofta, beef", unit:"3 pieces", cal:270, p:20, c:4, f:19},
+  {name:"Baklava", unit:"1 piece", cal:230, p:3, c:22, f:15},
+  {name:"Tzatziki", unit:"1/4 cup", cal:35, p:2, c:2, f:2},
+  {name:"Moussaka", unit:"1 cup", cal:320, p:15, c:16, f:22},
+  {name:"Greek salad", unit:"1 bowl", cal:220, p:6, c:12, f:17},
+  {name:"Dolma (stuffed grape leaves)", unit:"4 pieces", cal:170, p:3, c:22, f:8},
+  {name:"Fattoush", unit:"1 bowl", cal:150, p:3, c:18, f:8},
+
+  // European
+  {name:"Paella, seafood", unit:"1 cup", cal:350, p:20, c:45, f:9},
+  {name:"Spaghetti Bolognese", unit:"1 cup", cal:340, p:18, c:40, f:12},
+  {name:"Lasagna", unit:"1 slice", cal:400, p:22, c:32, f:20},
+  {name:"Margherita pizza", unit:"1 slice", cal:250, p:10, c:30, f:9},
+  {name:"Risotto", unit:"1 cup", cal:340, p:8, c:50, f:11},
+  {name:"Ratatouille", unit:"1 cup", cal:120, p:2.5, c:15, f:6},
+  {name:"Quiche Lorraine", unit:"1 slice", cal:390, p:14, c:22, f:28},
+  {name:"Croissant", unit:"1 medium", cal:230, p:5, c:26, f:12},
+  {name:"Crepe, plain", unit:"1 crepe", cal:120, p:4, c:15, f:5},
+  {name:"French onion soup", unit:"1 bowl", cal:280, p:12, c:22, f:16},
+  {name:"Beef bourguignon", unit:"1 cup", cal:360, p:26, c:12, f:22},
+  {name:"Goulash, beef", unit:"1 cup", cal:320, p:24, c:20, f:16},
+  {name:"Schnitzel, pork", unit:"1 piece (150g)", cal:420, p:28, c:22, f:24},
+  {name:"Currywurst", unit:"1 serving", cal:450, p:16, c:25, f:32},
+  {name:"Bratwurst", unit:"1 sausage", cal:290, p:13, c:2, f:25},
+  {name:"Pierogi, potato & cheese", unit:"5 pieces", cal:350, p:10, c:55, f:10},
+  {name:"Borscht", unit:"1 bowl", cal:130, p:4, c:20, f:4},
+  {name:"Fish and chips", unit:"1 serving", cal:650, p:28, c:60, f:34},
+  {name:"Shepherd's pie", unit:"1 cup", cal:340, p:18, c:28, f:17},
+  {name:"Paella Valenciana", unit:"1 cup", cal:340, p:18, c:44, f:10},
+  {name:"Gnocchi", unit:"1 cup", cal:250, p:6, c:48, f:3},
+  {name:"Tiramisu", unit:"1 slice", cal:330, p:5, c:30, f:22},
+
+  // Latin American / Caribbean
+  {name:"Tacos al pastor", unit:"2 tacos", cal:340, p:20, c:30, f:16},
+  {name:"Chicken enchiladas", unit:"2 enchiladas", cal:420, p:22, c:38, f:20},
+  {name:"Beef burrito", unit:"1 burrito", cal:560, p:28, c:65, f:22},
+  {name:"Guacamole", unit:"1/4 cup", cal:120, p:1.5, c:7, f:11},
+  {name:"Quesadilla, cheese", unit:"1 quesadilla", cal:380, p:16, c:32, f:22},
+  {name:"Tamale, pork", unit:"1 tamale", cal:285, p:11, c:28, f:15},
+  {name:"Empanada, beef", unit:"1 empanada", cal:250, p:9, c:24, f:13},
+  {name:"Ceviche", unit:"1 cup", cal:180, p:24, c:12, f:3},
+  {name:"Arroz con pollo", unit:"1 cup", cal:340, p:22, c:38, f:10},
+  {name:"Feijoada (Brazilian bean stew)", unit:"1 cup", cal:380, p:24, c:30, f:18},
+  {name:"Churros", unit:"3 pieces", cal:280, p:3, c:36, f:14},
+  {name:"Jerk chicken", unit:"100 g", cal:230, p:26, c:4, f:12},
+  {name:"Rice and peas (Caribbean)", unit:"1 cup", cal:300, p:7, c:55, f:6},
+  {name:"Plantain, fried", unit:"1 cup", cal:250, p:1.5, c:48, f:7},
+  {name:"Pupusa", unit:"1 pupusa", cal:220, p:7, c:30, f:8},
+  {name:"Cuban sandwich", unit:"1 sandwich", cal:520, p:32, c:40, f:26},
+
+  // African
+  {name:"Jollof rice", unit:"1 cup", cal:320, p:7, c:55, f:8},
+  {name:"Injera with lentil stew", unit:"1 serving", cal:380, p:14, c:65, f:8},
+  {name:"Suya (spiced beef skewers)", unit:"100 g", cal:230, p:25, c:4, f:13},
+  {name:"Egusi soup", unit:"1 cup", cal:280, p:14, c:12, f:20},
+  {name:"Bunny chow (curry in bread)", unit:"1 serving", cal:520, p:20, c:70, f:18},
+  {name:"Couscous with vegetables (Moroccan)", unit:"1 cup", cal:230, p:6, c:42, f:4},
+  {name:"Tagine, chicken", unit:"1 cup", cal:300, p:24, c:16, f:15},
+  {name:"Fufu", unit:"1 cup", cal:210, p:1.5, c:50, f:0.3},
+
+  // Fruits
+  {name:"Apricot", unit:"1 medium", cal:17, p:0.5, c:4, f:0.1},
+  {name:"Avocado, whole", unit:"1 fruit", cal:240, p:3, c:13, f:22},
+  {name:"Blackberries", unit:"1 cup", cal:62, p:2, c:14, f:0.7},
+  {name:"Cantaloupe", unit:"1 cup, cubed", cal:53, p:1.3, c:13, f:0.3},
+  {name:"Cherries", unit:"1 cup", cal:97, p:1.6, c:25, f:0.3},
+  {name:"Clementine", unit:"1 fruit", cal:35, p:0.6, c:9, f:0.1},
+  {name:"Coconut, fresh", unit:"1/2 cup, shredded", cal:141, p:1.3, c:6, f:13.4},
+  {name:"Cranberries, fresh", unit:"1 cup", cal:46, p:0.4, c:12, f:0.1},
+  {name:"Dragon fruit", unit:"1 cup", cal:60, p:1.2, c:13, f:0.4},
+  {name:"Durian", unit:"1 cup", cal:357, p:3.6, c:66, f:13},
+  {name:"Fig, fresh", unit:"1 medium", cal:37, p:0.4, c:10, f:0.1},
+  {name:"Fig, dried", unit:"2 figs", cal:100, p:1.3, c:26, f:0.4},
+  {name:"Gooseberry", unit:"1 cup", cal:66, p:1.3, c:15, f:0.9},
+  {name:"Grapefruit", unit:"1/2 fruit", cal:52, p:1, c:13, f:0.2},
+  {name:"Guava", unit:"1 fruit", cal:37, p:1.4, c:8, f:0.5},
+  {name:"Jackfruit", unit:"1 cup", cal:157, p:2.8, c:38, f:0.5},
+  {name:"Kiwi", unit:"1 fruit", cal:42, p:0.8, c:10, f:0.4},
+  {name:"Kinnow / mandarin", unit:"1 fruit", cal:47, p:0.7, c:12, f:0.3},
+  {name:"Lemon", unit:"1 fruit", cal:17, p:0.6, c:5, f:0.2},
+  {name:"Lime", unit:"1 fruit", cal:20, p:0.5, c:7, f:0.1},
+  {name:"Lychee", unit:"1 cup", cal:125, p:1.6, c:31, f:0.8},
+  {name:"Melon, honeydew", unit:"1 cup", cal:61, p:0.9, c:15, f:0.2},
+  {name:"Mulberries", unit:"1 cup", cal:60, p:2, c:14, f:0.6},
+  {name:"Nectarine", unit:"1 medium", cal:62, p:1.5, c:15, f:0.4},
+  {name:"Papaya", unit:"1 cup, cubed", cal:62, p:0.7, c:16, f:0.2},
+  {name:"Passion fruit", unit:"1 fruit", cal:17, p:0.4, c:4, f:0.1},
+  {name:"Persimmon", unit:"1 fruit", cal:118, p:1, c:31, f:0.3},
+  {name:"Plum", unit:"1 fruit", cal:30, p:0.5, c:8, f:0.2},
+  {name:"Pomegranate seeds", unit:"1 cup", cal:144, p:3, c:33, f:2},
+  {name:"Prunes", unit:"5 prunes", cal:100, p:0.9, c:27, f:0.2},
+  {name:"Raspberries", unit:"1 cup", cal:64, p:1.5, c:15, f:0.8},
+  {name:"Star fruit", unit:"1 fruit", cal:28, p:1, c:6, f:0.3},
+  {name:"Sugarcane, chewed juice equiv.", unit:"1 cup juice", cal:180, p:0, c:45, f:0},
+  {name:"Tangerine", unit:"1 fruit", cal:47, p:0.7, c:12, f:0.3},
+  {name:"Custard apple (sharifa)", unit:"1 fruit", cal:94, p:2.1, c:24, f:0.5},
+  {name:"Falsa berries", unit:"1 cup", cal:70, p:1.5, c:16, f:0.6},
+  {name:"Muskmelon", unit:"1 cup, cubed", cal:53, p:1.3, c:13, f:0.3},
+
+  // Juices & fruit drinks
+  {name:"Apple juice", unit:"1 cup", cal:114, p:0.2, c:28, f:0.3},
+  {name:"Grape juice", unit:"1 cup", cal:152, p:0.9, c:37, f:0.2},
+  {name:"Grapefruit juice", unit:"1 cup", cal:96, p:1.3, c:23, f:0.2},
+  {name:"Pineapple juice", unit:"1 cup", cal:132, p:0.9, c:32, f:0.2},
+  {name:"Cranberry juice cocktail", unit:"1 cup", cal:137, p:0, c:34, f:0},
+  {name:"Pomegranate juice", unit:"1 cup", cal:134, p:0.3, c:32, f:0.3},
+  {name:"Mango juice", unit:"1 cup", cal:128, p:0.6, c:32, f:0.4},
+  {name:"Guava juice", unit:"1 cup", cal:112, p:0.4, c:28, f:0.3},
+  {name:"Watermelon juice", unit:"1 cup", cal:71, p:1.3, c:18, f:0.3},
+  {name:"Carrot juice", unit:"1 cup", cal:94, p:2.2, c:22, f:0.4},
+  {name:"Tomato juice", unit:"1 cup", cal:41, p:1.8, c:10, f:0.1},
+  {name:"Vegetable juice blend", unit:"1 cup", cal:46, p:1.6, c:11, f:0.2},
+  {name:"Lemonade", unit:"1 cup", cal:99, p:0.2, c:26, f:0.1},
+  {name:"Limeade / nimbu pani", unit:"1 cup", cal:90, p:0.1, c:23, f:0.1},
+  {name:"Sugarcane juice", unit:"1 cup", cal:183, p:0.2, c:47, f:0},
+  {name:"Mixed berry smoothie", unit:"1 cup", cal:150, p:2, c:35, f:1},
+  {name:"Mango lassi", unit:"1 glass (250ml)", cal:250, p:6, c:40, f:7},
+  {name:"Coconut water", unit:"1 cup", cal:46, p:1.7, c:9, f:0.5},
+  {name:"Aloe vera juice", unit:"1 cup", cal:30, p:0, c:8, f:0},
+  {name:"Prune juice", unit:"1 cup", cal:182, p:1.6, c:45, f:0.1},
+  {name:"Fruit punch", unit:"1 cup", cal:117, p:0, c:30, f:0},
+  {name:"V8 vegetable juice", unit:"1 cup", cal:50, p:2, c:11, f:0},
+  {name:"Kiwi juice", unit:"1 cup", cal:105, p:1.2, c:26, f:0.5},
+  {name:"Apple-carrot juice blend", unit:"1 cup", cal:100, p:0.8, c:24, f:0.2},
+];
+
+/* ============ STATE ============ */
+const MEALS = ["Breakfast","Lunch","Dinner","Snacks"];
+const MEAL_META = {
+  Breakfast:{icon:"🌅", cls:"breakfast", ring:"#F2A71B", track:"#FCEBC9"},
+  Lunch:{icon:"☀️", cls:"lunch", ring:"#6F9451", track:"#E5EEDA"},
+  Dinner:{icon:"🌙", cls:"dinner", ring:"#E1487B", track:"#FBE0EA"},
+  Snacks:{icon:"🍎", cls:"snacks", ring:"#FF6B57", track:"#FFE2DA"}
+};
+let profile = null;
+let currentDate = new Date();
+let activeMealForAdd = "Breakfast";
+
+/* ============ DIET PLAN STATE ============ */
+let dietPlan = [];
+let alarmCheckInterval = null;
+let lastFiredKey = {};
+let alarmAudioCtx = null, alarmBeepTimer = null;
+
+const MEAL_CAL_SPLIT = {Breakfast:0.25, Lunch:0.35, Snacks:0.10, Dinner:0.30};
+const MEAL_DEFAULT_TIME = {Breakfast:"08:00", Lunch:"13:00", Snacks:"16:30", Dinner:"19:30"};
+/* Curated pools (by exact FOOD_DB name) used when auto-generating a plan */
+const MEAL_FOOD_HINTS = {
+  Breakfast:["Oats, dry","Egg, large","Greek yogurt, plain","Banana","Whole wheat bread","Peanut butter",
+    "Milk, 2%","Avocado","Cereal, corn flakes","Almonds","Blueberries","Strawberries","Protein shake",
+    "Granola","Apple","Egg whites"],
+  Lunch:["Chicken breast, cooked","Brown rice, cooked","White rice, cooked","Broccoli, steamed",
+    "Sweet potato, baked","Quinoa, cooked","Black beans, cooked","Salmon, cooked","Mixed salad greens",
+    "Chickpeas, cooked","Tortilla, flour","Hummus","Turkey breast, cooked","Roti / chapati",
+    "Daal chawal (lentils & rice)","Greek yogurt, plain"],
+  Dinner:["Chicken breast, cooked","Salmon, cooked","Ground beef 90/10, cooked","Brown rice, cooked",
+    "Sweet potato, baked","Broccoli, steamed","Green beans, steamed","Cauliflower, steamed","Tofu, firm",
+    "Lentils, cooked","Butter chicken","Chicken karahi","Vegetable pulao","Roti / chapati"],
+  Snacks:["Almonds","Walnuts","Greek yogurt, plain","Protein bar","Apple","Banana","Cottage cheese, low-fat",
+    "Hummus","Rice cakes","Trail mix","Dark chocolate, 70%","Orange","Protein shake"]
+};
+
+function dkey(d){
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+function fmtDate(d){
+  return d.toLocaleDateString(undefined,{month:"short",day:"numeric"});
+}
+function relDay(d){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const dd = new Date(d); dd.setHours(0,0,0,0);
+  const diff = Math.round((dd-today)/86400000);
+  if(diff===0) return "TODAY";
+  if(diff===-1) return "YESTERDAY";
+  if(diff===1) return "TOMORROW";
+  return d.toLocaleDateString(undefined,{weekday:"short"}).toUpperCase();
+}
+
+/* ============ DEFAULT PROFILE ============ */
+function defaultProfile(){
+  return {
+    sex:"female", age:30, height:165, weightNow:70, activity:1.55, goal:"maintain",
+    pctProtein:30, pctCarbs:40, pctFat:30,
+    targetCal:2000, targetProtein:150, targetCarbs:200, targetFat:67,
+    alarmsEnabled:false
+  };
+}
+
+/* ============ INIT ============ */
+async function init(){
+  bindEvents();
+  registerOfflineSupport();
+  updateSyncUI("checking");
+
+  if(fbAuth){
+    fbAuth.onAuthStateChanged(async (user)=>{
+      fbUser = user;
+      if(user){
+        updateSyncUI("in", user.email);
+        await migrateLocalToCloud();
+        document.getElementById("loginBackdrop").classList.remove("active");
+      }else{
+        updateSyncUI("out");
+      }
+      await loadAndRenderAll();
+    });
+  }else{
+    updateSyncUI(FIREBASE_READY ? "error" : "unconfigured");
+    await loadAndRenderAll();
+  }
+}
+
+/* ============ OFFLINE / PWA SUPPORT ============ */
+/* Registers a service worker generated in-memory (via Blob URL) so the whole
+   app stays a single file — no separate .js file needed in the repo. This
+   caches this page on first load so it keeps working with no signal once
+   installed to your phone's home screen. */
+function registerOfflineSupport(){
+  if(!("serviceWorker" in navigator)) return;
+  const swSource = `
+    const CACHE = "nourish-cache-v1";
+    self.addEventListener("install", (e)=>{
+      self.skipWaiting();
+      e.waitUntil(caches.open(CACHE).then(c=>c.add(self.registration.scope)));
+    });
+    self.addEventListener("activate", (e)=>{ self.clients.claim(); });
+    self.addEventListener("fetch", (e)=>{
+      if(e.request.method !== "GET") return;
+      e.respondWith(
+        caches.match(e.request).then(cached=>{
+          const fetchPromise = fetch(e.request).then(res=>{
+            if(res && res.ok){
+              caches.open(CACHE).then(c=>c.put(e.request, res.clone()));
+            }
+            return res;
+          }).catch(()=>cached);
+          return cached || fetchPromise;
+        })
+      );
+    });
+  `;
+  try{
+    const blob = new Blob([swSource], {type:"application/javascript"});
+    const swUrl = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(swUrl).catch(()=>{ /* offline support unavailable, app still works online */ });
+  }catch(e){ /* Blob/service worker unavailable in this context */ }
+}
+
+
+async function loadAndRenderAll(){
+  profile = await sGet("profile") || defaultProfile();
+  if(profile.alarmsEnabled === undefined) profile.alarmsEnabled = false;
+  fillSettingsForm();
+  renderDateHeader();
+  await renderDiary();
+  dietPlan = await getPlan();
+  if(profile.alarmsEnabled) startAlarmChecker();
+}
+
+function updateSyncUI(state, email){
+  const hint = document.getElementById("syncStatusHint");
+  const loggedOut = document.getElementById("accountLoggedOut");
+  const loggedIn = document.getElementById("accountLoggedIn");
+  if(state==="in"){
+    loggedOut.style.display = "none";
+    loggedIn.style.display = "block";
+    document.getElementById("acctEmail").textContent = email;
+  }else{
+    loggedOut.style.display = "block";
+    loggedIn.style.display = "none";
+    if(state==="out") hint.textContent = "Not signed in — your diary is only saved on this device. Sign in to sync across devices.";
+    else if(state==="unconfigured") hint.textContent = "Cloud sync isn't set up yet — this diary is only saved on this device. See the setup steps in the sign-in screen.";
+    else if(state==="error") hint.textContent = "Cloud sync couldn't connect — this diary is only saved on this device for now.";
+    else hint.textContent = "Checking sync status…";
+  }
+}
+
+function fillSettingsForm(){
+  document.querySelectorAll("#sexSeg button").forEach(b=>b.classList.toggle("active", b.dataset.v===profile.sex));
+  document.querySelectorAll("#goalSeg button").forEach(b=>b.classList.toggle("active", b.dataset.v===profile.goal));
+  document.getElementById("age").value = profile.age;
+  document.getElementById("height").value = profile.height;
+  document.getElementById("weightNow").value = profile.weightNow;
+  document.getElementById("activity").value = profile.activity;
+  document.getElementById("pctProtein").value = profile.pctProtein;
+  document.getElementById("pctCarbs").value = profile.pctCarbs;
+  document.getElementById("pctFat").value = profile.pctFat;
+  document.getElementById("tCal").value = profile.targetCal;
+  document.getElementById("tProtein").value = profile.targetProtein;
+  document.getElementById("tCarbs").value = profile.targetCarbs;
+  document.getElementById("tFat").value = profile.targetFat;
+  updateSplitTotal();
+}
+
+function renderDateHeader(){
+  document.getElementById("dateLabel").textContent = fmtDate(currentDate);
+  document.getElementById("dateRel").textContent = relDay(currentDate);
+}
+
+/* ============ RING HELPERS ============ */
+function ringSVG(size, stroke, percent, color, track){
+  const r = (size-stroke)/2;
+  const c = 2*Math.PI*r;
+  const offset = c - (Math.min(percent,100)/100)*c;
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="${track}" stroke-width="${stroke}"/>
+    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="${color}" stroke-width="${stroke}"
+      stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${offset.toFixed(1)}"
+      transform="rotate(-90 ${size/2} ${size/2})" style="transition:stroke-dashoffset .4s ease;"/>
+  </svg>`;
+}
+
+/* ============ DIARY RENDER ============ */
+async function getDayLog(){
+  const key = "log:"+dkey(currentDate);
+  return await sGet(key) || [];
+}
+async function setDayLog(entries){
+  const key = "log:"+dkey(currentDate);
+  await sSet(key, entries);
+}
+
+function entryTotals(e){
+  return {
+    cal: e.baseCal*e.qty,
+    p: e.baseP*e.qty,
+    c: e.baseC*e.qty,
+    f: e.baseF*e.qty
+  };
+}
+function sumEntries(entries){
+  return entries.reduce((a,e)=>{
+    const t = entryTotals(e);
+    return {cal:a.cal+t.cal, p:a.p+t.p, c:a.c+t.c, f:a.f+t.f};
+  }, {cal:0,p:0,c:0,f:0});
+}
+
+async function renderDiary(){
+  const entries = await getDayLog();
+  const totals = sumEntries(entries);
+  renderFactsPanel(totals);
+  renderMeals(entries);
+}
+
+function pct(val, target){
+  if(!target) return 0;
+  return Math.max(0, Math.min(100, Math.round((val/target)*100)));
+}
+
+function renderFactsPanel(totals){
+  const t = profile;
+  const remaining = Math.round(t.targetCal - totals.cal);
+  const calPct = pct(totals.cal, t.targetCal);
+  const over = remaining < 0;
+
+  document.getElementById("factsPanel").innerHTML = `
+    <div class="hero-top">
+      <div class="hero-copy">
+        <div class="hlabel">${over ? "Over Budget" : "Calories Left"}</div>
+        <div class="hval ${over?'over':''}">${Math.abs(remaining)}</div>
+        <div class="hsub">of ${t.targetCal} kcal goal · ${Math.round(totals.cal)} eaten</div>
+      </div>
+      <div class="hero-ring">
+        ${ringSVG(112, 12, calPct, over ? "#FF6B57" : "#F2A71B", "#F3ECDC")}
+        <div class="ring-center">
+          <div class="rpct">${calPct}%</div>
+          <div class="rtag">of goal</div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-rings">
+      ${miniRing("Protein", totals.p, t.targetProtein, "#E1487B", "#FBE0EA")}
+      ${miniRing("Carbs", totals.c, t.targetCarbs, "#F2A71B", "#FCEBC9")}
+      ${miniRing("Fat", totals.f, t.targetFat, "#6F9451", "#E5EEDA")}
+    </div>
+  `;
+}
+function miniRing(label, val, target, color, track){
+  const p = pct(val, target);
+  return `
+    <div class="mini-ring">
+      <div class="mr-svg">
+        ${ringSVG(46, 6, p, color, track)}
+        <div class="mr-center">${p>=100?"✓":""}</div>
+      </div>
+      <div class="mr-copy">
+        <div class="mname">${label}</div>
+        <div class="mnums">${Math.round(val)}<span>/${target}g</span></div>
+      </div>
+    </div>`;
+}
+
+function renderMeals(entries){
+  const container = document.getElementById("mealsContainer");
+  container.innerHTML = "";
+  MEALS.forEach(meal=>{
+    const meta = MEAL_META[meal];
+    const mealEntries = entries.filter(e=>e.meal===meal);
+    const mealCal = mealEntries.reduce((a,e)=>a+entryTotals(e).cal,0);
+    const section = document.createElement("div");
+    section.className = "meal-card";
+    section.innerHTML = `
+      <div class="meal-head">
+        <div class="meal-icon ${meta.cls}">${meta.icon}</div>
+        <div class="meal-titles">
+          <h2>${meal}</h2>
+          <div class="mkcal">${Math.round(mealCal)} kcal</div>
+        </div>
+        <button class="add-btn" data-meal="${meal}">＋ Add</button>
+      </div>
+      <div class="entries" data-meal="${meal}"></div>
+    `;
+    const entriesDiv = section.querySelector(".entries");
+    if(mealEntries.length===0){
+      entriesDiv.innerHTML = `<div class="empty-meal">No items logged yet.</div>`;
+    }else{
+      mealEntries.forEach(e=>{
+        const t = entryTotals(e);
+        const row = document.createElement("div");
+        row.className = "entry";
+        row.innerHTML = `
+          <div class="einfo">
+            <div class="ename">${escapeHtml(e.name)}</div>
+            <span class="eqty">${escapeHtml(e.unit)}</span>
+          </div>
+          <div class="estepper">
+            <button class="qbtn qminus" data-id="${e.id}">−</button>
+            <span class="qval">${formatQty(e.qty)}</span>
+            <button class="qbtn qplus" data-id="${e.id}">+</button>
+          </div>
+          <div class="etotals">
+            <div class="emacros">P${Math.round(t.p)} · C${Math.round(t.c)} · F${Math.round(t.f)}</div>
+            <div class="ecal">${Math.round(t.cal)}</div>
+          </div>
+          <button class="edel" data-id="${e.id}">×</button>
+        `;
+        entriesDiv.appendChild(row);
+      });
+    }
+    container.appendChild(section);
+  });
+
+  container.querySelectorAll(".add-btn").forEach(b=>{
+    b.addEventListener("click", ()=>openAddModal(b.dataset.meal));
+  });
+  container.querySelectorAll(".edel").forEach(b=>{
+    b.addEventListener("click", async ()=>{
+      const entries = await getDayLog();
+      const filtered = entries.filter(e=>e.id!==b.dataset.id);
+      await setDayLog(filtered);
+      renderDiary();
+    });
+  });
+  container.querySelectorAll(".qplus").forEach(b=>{
+    b.addEventListener("click", ()=>stepEntry(b.dataset.id, 1));
+  });
+  container.querySelectorAll(".qminus").forEach(b=>{
+    b.addEventListener("click", ()=>stepEntry(b.dataset.id, -1));
+  });
+}
+
+function formatQty(q){
+  return (Math.round(q*100)/100).toString();
+}
+
+async function stepEntry(id, delta){
+  const entries = await getDayLog();
+  const idx = entries.findIndex(e=>e.id===id);
+  if(idx<0) return;
+  const e = entries[idx];
+  const newQty = Math.round((e.qty+delta)*100)/100;
+  if(newQty<=0){
+    entries.splice(idx,1);
+  }else{
+    e.qty = newQty;
+  }
+  await setDayLog(entries);
+  renderDiary();
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+}
+
+/* ============ ADD FOOD MODAL ============ */
+function openAddModal(meal){
+  activeMealForAdd = meal;
+  document.getElementById("mealTargetLabel").textContent = meal;
+  document.getElementById("foodSearch").value = "";
+  renderQuickList(FOOD_DB);
+  document.getElementById("cName").value = "";
+  document.getElementById("cQty").value = 1;
+  document.getElementById("cUnit").value = "serving";
+  document.getElementById("cCal").value = "";
+  document.getElementById("cProtein").value = "";
+  document.getElementById("cCarbs").value = "";
+  document.getElementById("cFat").value = "";
+  document.getElementById("addBackdrop").classList.add("active");
+}
+function closeAddModal(){
+  document.getElementById("addBackdrop").classList.remove("active");
+}
+
+function renderQuickList(items){
+  const list = document.getElementById("quickList");
+  list.innerHTML = "";
+  if(items.length===0){
+    list.innerHTML = `<div class="empty-meal">No matches — log it as custom food below.</div>`;
+    return;
+  }
+  items.forEach(f=>{
+    const row = document.createElement("div");
+    row.className = "quick-item";
+    row.innerHTML = `
+      <div>
+        <div class="qname">${escapeHtml(f.name)}</div>
+        <div class="qsub">${escapeHtml(f.unit)} · P${f.p} C${f.c} F${f.f}</div>
+      </div>
+      <div class="qcal">${f.cal} kcal</div>
+    `;
+    row.addEventListener("click", ()=>quickAdd(f));
+    list.appendChild(row);
+  });
+}
+
+async function quickAdd(f){
+  const entries = await getDayLog();
+  entries.push({
+    id: Date.now()+"-"+Math.random().toString(36).slice(2,7),
+    meal: activeMealForAdd,
+    name: f.name, qty:1, unit:f.unit,
+    baseCal:f.cal, baseP:f.p, baseC:f.c, baseF:f.f
+  });
+  await setDayLog(entries);
+  closeAddModal();
+  renderDiary();
+  showToast(f.name+" added to "+activeMealForAdd);
+}
+
+async function addCustom(){
+  const name = document.getElementById("cName").value.trim();
+  let qty = parseFloat(document.getElementById("cQty").value) || 1;
+  const unit = document.getElementById("cUnit").value.trim() || "serving";
+  const cal = parseFloat(document.getElementById("cCal").value)||0;
+  const p = parseFloat(document.getElementById("cProtein").value)||0;
+  const c = parseFloat(document.getElementById("cCarbs").value)||0;
+  const f = parseFloat(document.getElementById("cFat").value)||0;
+  if(!name){ document.getElementById("cName").focus(); return; }
+  if(!cal){ document.getElementById("cCal").focus(); return; }
+  if(qty<=0) qty = 1;
+  const entries = await getDayLog();
+  entries.push({
+    id: Date.now()+"-"+Math.random().toString(36).slice(2,7),
+    meal: activeMealForAdd, name, qty, unit,
+    baseCal:cal/qty, baseP:p/qty, baseC:c/qty, baseF:f/qty
+  });
+  await setDayLog(entries);
+  closeAddModal();
+  renderDiary();
+  showToast(name+" added to "+activeMealForAdd);
+}
+
+/* ============ TOAST ============ */
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove("show"), 1800);
+}
+
+/* ============ DIET PLAN ============ */
+async function getPlan(){
+  return (await sGet("dietplan")) || [];
+}
+async function setPlan(items){
+  await sSet("dietplan", items);
+}
+
+function fmtTime(t){
+  const parts = (t||"08:00").split(":").map(Number);
+  const h = parts[0]||0, m = parts[1]||0;
+  const ap = h>=12 ? "PM" : "AM";
+  const h12 = ((h+11)%12)+1;
+  return h12+":"+String(m).padStart(2,"0")+" "+ap;
+}
+
+async function renderPlan(){
+  dietPlan = await getPlan();
+  document.getElementById("alarmToggle").checked = !!profile.alarmsEnabled;
+  updateAlarmStatusHint();
+  renderPlanSummary(dietPlan);
+
+  const list = document.getElementById("planList");
+  if(dietPlan.length===0){
+    list.innerHTML = `<div class="hist-empty">No plan yet — tap "Auto-generate plan" for a starting point based on your targets, or add items manually.</div>`;
+    return;
+  }
+  const sorted = dietPlan.slice().sort((a,b)=>a.time.localeCompare(b.time));
+  list.innerHTML = "";
+  sorted.forEach(item=>{
+    const meta = MEAL_META[item.meal] || MEAL_META.Snacks;
+    const cal = Math.round(item.baseCal*item.qty);
+    const p = Math.round(item.baseP*item.qty);
+    const c = Math.round(item.baseC*item.qty);
+    const f = Math.round(item.baseF*item.qty);
+    const row = document.createElement("div");
+    row.className = "plan-item";
+    row.innerHTML = `
+      <div class="pi-time">${fmtTime(item.time)}</div>
+      <div class="pi-icon ${meta.cls}">${meta.icon}</div>
+      <div class="pi-body">
+        <div class="pi-name">${escapeHtml(item.name)}</div>
+        <div class="pi-sub">${item.meal} · P${p} C${c} F${f} · ${cal} kcal</div>
+      </div>
+      <div class="pi-actions">
+        <button class="pi-btn pi-log" data-id="${item.id}" title="Log to today's diary">🍽️</button>
+        <button class="pi-btn pi-del" data-id="${item.id}" title="Remove from plan">×</button>
+      </div>
+    `;
+    list.appendChild(row);
+  });
+  list.querySelectorAll(".pi-log").forEach(b=>{
+    b.addEventListener("click", ()=>logPlanItemToday(b.dataset.id));
+  });
+  list.querySelectorAll(".pi-del").forEach(b=>{
+    b.addEventListener("click", ()=>deletePlanItem(b.dataset.id));
+  });
+}
+
+function renderPlanSummary(items){
+  const el = document.getElementById("planSummary");
+  if(!el) return;
+  if(!items.length){ el.innerHTML = ""; return; }
+  const totals = items.reduce((a,it)=>({
+    cal:a.cal+it.baseCal*it.qty, p:a.p+it.baseP*it.qty, c:a.c+it.baseC*it.qty, f:a.f+it.baseF*it.qty
+  }), {cal:0,p:0,c:0,f:0});
+  el.innerHTML = `
+    <div class="hero-top">
+      <div class="hero-copy">
+        <div class="hlabel">Planned Calories / Day</div>
+        <div class="hval">${Math.round(totals.cal)}</div>
+        <div class="hsub">of ${profile.targetCal} kcal target</div>
+      </div>
+    </div>
+    <div class="mini-rings">
+      ${miniRing("Protein", totals.p, profile.targetProtein, "#E1487B", "#FBE0EA")}
+      ${miniRing("Carbs", totals.c, profile.targetCarbs, "#F2A71B", "#FCEBC9")}
+      ${miniRing("Fat", totals.f, profile.targetFat, "#6F9451", "#E5EEDA")}
+    </div>
+  `;
+}
+
+async function logPlanItemToday(id){
+  const item = dietPlan.find(x=>x.id===id);
+  if(!item) return;
+  const todayKey = "log:"+dkey(new Date());
+  const entries = (await sGet(todayKey)) || [];
+  entries.push({
+    id: Date.now()+"-"+Math.random().toString(36).slice(2,7),
+    meal:item.meal, name:item.name, qty:item.qty, unit:item.unit,
+    baseCal:item.baseCal, baseP:item.baseP, baseC:item.baseC, baseF:item.baseF
+  });
+  await sSet(todayKey, entries);
+  showToast(item.name+" logged to today's diary");
+  if(dkey(currentDate)===dkey(new Date())) renderDiary();
+}
+
+async function deletePlanItem(id){
+  dietPlan = dietPlan.filter(x=>x.id!==id);
+  await setPlan(dietPlan);
+  renderPlan();
+  showToast("Removed from plan");
+}
+
+/* ---- Add / edit plan item modal ---- */
+function openPlanModal(){
+  document.getElementById("planMeal").value = "Breakfast";
+  document.getElementById("planTime").value = MEAL_DEFAULT_TIME.Breakfast;
+  document.getElementById("planFoodSearch").value = "";
+  renderPlanQuickList(FOOD_DB);
+  document.getElementById("pName").value = "";
+  document.getElementById("pQty").value = 1;
+  document.getElementById("pUnit").value = "serving";
+  document.getElementById("pCal").value = "";
+  document.getElementById("pProtein").value = "";
+  document.getElementById("pCarbs").value = "";
+  document.getElementById("pFat").value = "";
+  document.getElementById("planMeal").onchange = ()=>{
+    document.getElementById("planTime").value = MEAL_DEFAULT_TIME[document.getElementById("planMeal").value] || "08:00";
+  };
+  document.getElementById("planBackdrop").classList.add("active");
+}
+function closePlanModal(){
+  document.getElementById("planBackdrop").classList.remove("active");
+}
+
+function renderPlanQuickList(items){
+  const list = document.getElementById("planQuickList");
+  list.innerHTML = "";
+  if(items.length===0){
+    list.innerHTML = `<div class="empty-meal">No matches — add as a custom item below.</div>`;
+    return;
+  }
+  items.slice(0,40).forEach(f=>{
+    const row = document.createElement("div");
+    row.className = "quick-item";
+    row.innerHTML = `
+      <div>
+        <div class="qname">${escapeHtml(f.name)}</div>
+        <div class="qsub">${escapeHtml(f.unit)} · P${f.p} C${f.c} F${f.f}</div>
+      </div>
+      <div class="qcal">${f.cal} kcal</div>
+    `;
+    row.addEventListener("click", ()=>{
+      document.getElementById("pName").value = f.name;
+      document.getElementById("pQty").value = 1;
+      document.getElementById("pUnit").value = f.unit;
+      document.getElementById("pCal").value = f.cal;
+      document.getElementById("pProtein").value = f.p;
+      document.getElementById("pCarbs").value = f.c;
+      document.getElementById("pFat").value = f.f;
+      showToast(f.name+" filled in below — adjust qty/time then Save");
+    });
+    list.appendChild(row);
+  });
+}
+
+async function savePlanItem(){
+  const meal = document.getElementById("planMeal").value;
+  const time = document.getElementById("planTime").value || "08:00";
+  const name = document.getElementById("pName").value.trim();
+  let qty = parseFloat(document.getElementById("pQty").value)||1;
+  const unit = document.getElementById("pUnit").value.trim()||"serving";
+  const cal = parseFloat(document.getElementById("pCal").value)||0;
+  const p = parseFloat(document.getElementById("pProtein").value)||0;
+  const c = parseFloat(document.getElementById("pCarbs").value)||0;
+  const f = parseFloat(document.getElementById("pFat").value)||0;
+  if(!name){ document.getElementById("pName").focus(); return; }
+  if(!cal){ document.getElementById("pCal").focus(); return; }
+  if(qty<=0) qty = 1;
+  dietPlan = await getPlan();
+  dietPlan.push({
+    id: Date.now()+"-"+Math.random().toString(36).slice(2,7),
+    meal, time, name, unit, qty,
+    baseCal:cal/qty, baseP:p/qty, baseC:c/qty, baseF:f/qty
+  });
+  await setPlan(dietPlan);
+  closePlanModal();
+  renderPlan();
+  showToast(name+" added to plan at "+fmtTime(time));
+}
+
+/* ---- Auto-generate a plan from current targets ---- */
+function pickMealItems(mealName, calBudget){
+  const pool = (MEAL_FOOD_HINTS[mealName]||[]).map(n=>FOOD_DB.find(f=>f.name===n)).filter(Boolean);
+  if(pool.length===0) return [];
+  // Prioritize protein-dense foods first, then fill remaining budget with variety
+  const ranked = pool.slice().sort((a,b)=> (b.p/b.cal) - (a.p/a.cal));
+  let remaining = calBudget;
+  const chosen = [];
+  const used = new Set();
+  for(let i=0;i<ranked.length && chosen.length<4 && remaining>calBudget*0.12;i++){
+    const f = ranked[i];
+    if(used.has(f.name)) continue;
+    let qty = remaining / f.cal;
+    qty = Math.max(0.5, Math.min(2, Math.round(qty*2)/2));
+    const itemCal = f.cal*qty;
+    if(chosen.length>0 && itemCal > remaining*1.6) continue;
+    chosen.push({f, qty});
+    used.add(f.name);
+    remaining -= itemCal;
+  }
+  if(chosen.length===0){
+    chosen.push({f:ranked[0], qty:1});
+  }
+  return chosen;
+}
+
+async function generatePlan(){
+  const existing = await getPlan();
+  if(existing.length>0){
+    const ok = confirm("This replaces your current plan with a freshly generated one based on your saved targets. Continue?");
+    if(!ok) return;
+  }
+  const newPlan = [];
+  MEALS.forEach(meal=>{
+    const calBudget = profile.targetCal * (MEAL_CAL_SPLIT[meal]||0.25);
+    const chosen = pickMealItems(meal, calBudget);
+    chosen.forEach(({f,qty})=>{
+      newPlan.push({
+        id: Date.now()+"-"+Math.random().toString(36).slice(2,7)+"-"+meal,
+        meal, time: MEAL_DEFAULT_TIME[meal], name:f.name, unit:f.unit, qty,
+        baseCal:f.cal, baseP:f.p, baseC:f.c, baseF:f.f
+      });
+    });
+  });
+  dietPlan = newPlan;
+  await setPlan(dietPlan);
+  renderPlan();
+  showToast("Generated a plan from your targets — edit times or items anytime");
+}
+
+/* ---- Alarms ---- */
+function updateAlarmStatusHint(){
+  const hint = document.getElementById("alarmStatusHint");
+  hint.textContent = profile.alarmsEnabled
+    ? "On — you'll get a sound + popup when each plan time arrives (keep this tab open)."
+    : "Off — enable to get notified at meal times.";
+}
+
+function startAlarmChecker(){
+  if(alarmCheckInterval) return;
+  checkAlarms();
+  alarmCheckInterval = setInterval(checkAlarms, 15000);
+}
+function stopAlarmChecker(){
+  if(alarmCheckInterval){ clearInterval(alarmCheckInterval); alarmCheckInterval = null; }
+}
+
+async function checkAlarms(){
+  if(!profile || !profile.alarmsEnabled) return;
+  if(!dietPlan || !dietPlan.length){ dietPlan = await getPlan(); }
+  if(!dietPlan.length) return;
+  const now = new Date();
+  const nowTime = String(now.getHours()).padStart(2,"0")+":"+String(now.getMinutes()).padStart(2,"0");
+  const fireKey = dkey(now)+" "+nowTime;
+  for(const item of dietPlan){
+    if(item.time===nowTime && lastFiredKey[item.id]!==fireKey){
+      lastFiredKey[item.id] = fireKey;
+      triggerAlarm(item);
+    }
+  }
+}
+
+function triggerAlarm(item){
+  const cal = Math.round(item.baseCal*item.qty);
+  document.getElementById("alarmTitle").textContent = item.meal+" time!";
+  document.getElementById("alarmSub").textContent = item.name+" — "+cal+" kcal · scheduled "+fmtTime(item.time);
+  document.getElementById("alarmBackdrop").classList.add("active");
+  playAlarmSound();
+  if(window.Notification && Notification.permission==="granted"){
+    try{ new Notification("🍽️ "+item.meal+" time", {body:item.name+" — "+cal+" kcal"}); }catch(e){ /* ignore */ }
+  }
+}
+
+function playAlarmSound(){
+  try{
+    if(!alarmAudioCtx) alarmAudioCtx = new (window.AudioContext||window.webkitAudioContext)();
+    let count = 0;
+    clearInterval(alarmBeepTimer);
+    const beep = ()=>{
+      const osc = alarmAudioCtx.createOscillator();
+      const gain = alarmAudioCtx.createGain();
+      osc.type = "sine";
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.0001, alarmAudioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.3, alarmAudioCtx.currentTime+0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, alarmAudioCtx.currentTime+0.35);
+      osc.connect(gain).connect(alarmAudioCtx.destination);
+      osc.start();
+      osc.stop(alarmAudioCtx.currentTime+0.4);
+    };
+    beep();
+    alarmBeepTimer = setInterval(()=>{
+      count++;
+      const stillOpen = document.getElementById("alarmBackdrop").classList.contains("active");
+      if(count>=6 || !stillOpen){ clearInterval(alarmBeepTimer); return; }
+      beep();
+    }, 600);
+  }catch(e){ /* Web Audio unavailable */ }
+}
+function stopAlarmSound(){ clearInterval(alarmBeepTimer); }
+
+function dismissAlarm(){
+  document.getElementById("alarmBackdrop").classList.remove("active");
+  stopAlarmSound();
+}
+function snoozeAlarm(){
+  const title = document.getElementById("alarmTitle").textContent;
+  const sub = document.getElementById("alarmSub").textContent;
+  dismissAlarm();
+  setTimeout(()=>{
+    document.getElementById("alarmTitle").textContent = title;
+    document.getElementById("alarmSub").textContent = sub;
+    document.getElementById("alarmBackdrop").classList.add("active");
+    playAlarmSound();
+  }, 10*60*1000);
+  showToast("Snoozed for 10 minutes");
+}
+
+/* ============ WEIGHT / PROGRESS ============ */
+async function getWeights(){
+  return (await sGet("weights")) || [];
+}
+async function renderProgress(){
+  const weights = (await getWeights()).sort((a,b)=>a.date.localeCompare(b.date));
+  renderWeightChart(weights);
+  renderWeightList(weights);
+  await renderWeekStats();
+  await renderHistory();
+}
+
+async function renderHistory(){
+  const container = document.getElementById("historyList");
+  const keys = await sList("log:");
+  const days = [];
+  for(const key of keys){
+    const entries = await sGet(key);
+    if(entries && entries.length){
+      const dateStr = key.slice(4); // strip "log:"
+      days.push({dateStr, entries, totals: sumEntries(entries)});
+    }
+  }
+  days.sort((a,b)=>b.dateStr.localeCompare(a.dateStr));
+
+  if(days.length===0){
+    container.innerHTML = `<div class="hist-empty">No days logged yet — foods you add in the Diary will show up here.</div>`;
+    return;
+  }
+
+  container.innerHTML = "";
+  days.forEach(day=>{
+    const d = parseDateKey(day.dateStr);
+    const row = document.createElement("div");
+    row.className = "hist-row";
+    row.innerHTML = `
+      <div class="hleft">
+        <div class="hdate">${fmtDate(d)}, ${d.getFullYear()}</div>
+        <div class="hrel">${relDay(d)} · ${day.entries.length} item${day.entries.length===1?"":"s"}</div>
+      </div>
+      <div class="hright">
+        <div class="hcal">${Math.round(day.totals.cal)} kcal</div>
+        <div class="hmacros">P${Math.round(day.totals.p)} · C${Math.round(day.totals.c)} · F${Math.round(day.totals.f)}</div>
+      </div>
+    `;
+    row.addEventListener("click", ()=>{
+      currentDate = d;
+      renderDateHeader();
+      renderDiary();
+      switchView("diary");
+    });
+    container.appendChild(row);
+  });
+}
+
+function parseDateKey(dateStr){
+  const [y,m,d] = dateStr.split("-").map(Number);
+  return new Date(y, m-1, d);
+}
+function renderWeightList(weights){
+  const list = document.getElementById("weightList");
+  list.innerHTML = "";
+  weights.slice().reverse().slice(0,10).forEach(w=>{
+    const row = document.createElement("div");
+    row.className = "wrow";
+    row.innerHTML = `<span>${w.date}</span><span class="wkg">${w.kg} kg</span><button data-date="${w.date}">×</button>`;
+    row.querySelector("button").addEventListener("click", async ()=>{
+      const all = await getWeights();
+      await sSet("weights", all.filter(x=>x.date!==w.date));
+      renderProgress();
+    });
+    list.appendChild(row);
+  });
+}
+function renderWeightChart(weights){
+  const svg = document.getElementById("weightChart");
+  if(weights.length<2){
+    svg.innerHTML = `<text x="150" y="70" text-anchor="middle" font-family="Inter" font-size="12" fill="#95907F">Log at least 2 entries to see your trend</text>`;
+    return;
+  }
+  const recent = weights.slice(-14);
+  const vals = recent.map(w=>w.kg);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const range = (max-min)||1;
+  const padY = 15, padX = 10, w = 300-padX*2, h = 140-padY*2;
+  const pts = recent.map((pt,i)=>{
+    const x = padX + (i/(recent.length-1))*w;
+    const y = padY + h - ((pt.kg-min)/range)*h;
+    return [x,y];
+  });
+  const path = pts.map((p,i)=>(i===0?"M":"L")+p[0].toFixed(1)+","+p[1].toFixed(1)).join(" ");
+  const areaPath = path + ` L${pts[pts.length-1][0].toFixed(1)},${(padY+h).toFixed(1)} L${pts[0][0].toFixed(1)},${(padY+h).toFixed(1)} Z`;
+  const dots = pts.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.5" fill="#FF6B57" stroke="#fff" stroke-width="1.5"/>`).join("");
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="areaFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FF6B57" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="#FF6B57" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="${areaPath}" fill="url(#areaFade)" stroke="none"/>
+    <path d="${path}" fill="none" stroke="#FF6B57" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    ${dots}
+  `;
+}
+async function renderWeekStats(){
+  const grid = document.getElementById("weekStats");
+  let totalCal=0, days=0;
+  for(let i=0;i<7;i++){
+    const d = new Date(); d.setDate(d.getDate()-i);
+    const entries = await sGet("log:"+dkey(d));
+    if(entries && entries.length){
+      totalCal += sumEntries(entries).cal;
+      days++;
+    }
+  }
+  const avg = days? Math.round(totalCal/days) : 0;
+  const weights = await getWeights();
+  const change = weights.length>=2 ? (weights[weights.length-1].kg - weights[0].kg).toFixed(1) : "—";
+  grid.innerHTML = `
+    <div class="stat-card"><div class="slabel">Avg kcal / logged day</div><div class="sval">${avg||"—"}</div></div>
+    <div class="stat-card"><div class="slabel">Days logged (7d)</div><div class="sval">${days}/7</div></div>
+    <div class="stat-card"><div class="slabel">Weight change</div><div class="sval">${change!=="—"?(change>0?"+":"")+change+" kg":"—"}</div></div>
+    <div class="stat-card"><div class="slabel">Daily target</div><div class="sval">${profile.targetCal}</div></div>
+  `;
+}
+
+/* ============ SETTINGS LOGIC ============ */
+function updateSplitTotal(){
+  const p = parseFloat(document.getElementById("pctProtein").value)||0;
+  const c = parseFloat(document.getElementById("pctCarbs").value)||0;
+  const f = parseFloat(document.getElementById("pctFat").value)||0;
+  const total = p+c+f;
+  const el = document.getElementById("splitTotal");
+  el.textContent = "Total: "+total+"%";
+  el.classList.toggle("warn", total!==100);
+}
+
+function calcTargets(){
+  const sex = document.querySelector("#sexSeg button.active").dataset.v;
+  const age = parseFloat(document.getElementById("age").value)||30;
+  const height = parseFloat(document.getElementById("height").value)||165;
+  const weight = parseFloat(document.getElementById("weightNow").value)||70;
+  const activity = parseFloat(document.getElementById("activity").value);
+  const goal = document.querySelector("#goalSeg button.active").dataset.v;
+  const pctP = parseFloat(document.getElementById("pctProtein").value)||30;
+  const pctC = parseFloat(document.getElementById("pctCarbs").value)||40;
+  const pctF = parseFloat(document.getElementById("pctFat").value)||30;
+
+  // Mifflin-St Jeor
+  let bmr = sex==="male"
+    ? (10*weight + 6.25*height - 5*age + 5)
+    : (10*weight + 6.25*height - 5*age - 161);
+  let tdee = bmr * activity;
+  if(goal==="lose") tdee -= 500;
+  if(goal==="gain") tdee += 300;
+  tdee = Math.round(tdee/10)*10;
+
+  const targetProtein = Math.round((tdee*(pctP/100))/4);
+  const targetCarbs = Math.round((tdee*(pctC/100))/4);
+  const targetFat = Math.round((tdee*(pctF/100))/9);
+
+  document.getElementById("tCal").value = tdee;
+  document.getElementById("tProtein").value = targetProtein;
+  document.getElementById("tCarbs").value = targetCarbs;
+  document.getElementById("tFat").value = targetFat;
+
+  showToast("Targets calculated");
+}
+
+async function saveTargets(){
+  profile.sex = document.querySelector("#sexSeg button.active").dataset.v;
+  profile.goal = document.querySelector("#goalSeg button.active").dataset.v;
+  profile.age = parseFloat(document.getElementById("age").value)||profile.age;
+  profile.height = parseFloat(document.getElementById("height").value)||profile.height;
+  profile.weightNow = parseFloat(document.getElementById("weightNow").value)||profile.weightNow;
+  profile.activity = parseFloat(document.getElementById("activity").value);
+  profile.pctProtein = parseFloat(document.getElementById("pctProtein").value)||30;
+  profile.pctCarbs = parseFloat(document.getElementById("pctCarbs").value)||40;
+  profile.pctFat = parseFloat(document.getElementById("pctFat").value)||30;
+  profile.targetCal = parseFloat(document.getElementById("tCal").value)||profile.targetCal;
+  profile.targetProtein = parseFloat(document.getElementById("tProtein").value)||profile.targetProtein;
+  profile.targetCarbs = parseFloat(document.getElementById("tCarbs").value)||profile.targetCarbs;
+  profile.targetFat = parseFloat(document.getElementById("tFat").value)||profile.targetFat;
+  await sSet("profile", profile);
+  showToast("Targets saved");
+  renderDiary();
+}
+
+/* ============ NAV / EVENTS ============ */
+function switchView(name){
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+  if(name==="add"){
+    openAddModal(activeMealForAdd);
+    document.getElementById("view-diary").classList.add("active");
+    document.querySelector('.tab[data-view="diary"]').classList.add("active");
+    return;
+  }
+  document.getElementById("view-"+name).classList.add("active");
+  document.querySelector('.tab[data-view="'+name+'"]').classList.add("active");
+  if(name==="progress") renderProgress();
+  if(name==="plan") renderPlan();
+}
+
+function bindEvents(){
+  document.querySelectorAll(".tab").forEach(tab=>{
+    tab.addEventListener("click", ()=>switchView(tab.dataset.view));
+  });
+
+  document.getElementById("prevDay").addEventListener("click", ()=>{
+    currentDate.setDate(currentDate.getDate()-1);
+    renderDateHeader();
+    renderDiary();
+  });
+  document.getElementById("nextDay").addEventListener("click", ()=>{
+    currentDate.setDate(currentDate.getDate()+1);
+    renderDateHeader();
+    renderDiary();
+  });
+
+  document.getElementById("closeAdd").addEventListener("click", closeAddModal);
+  document.getElementById("addBackdrop").addEventListener("click", e=>{
+    if(e.target.id==="addBackdrop") closeAddModal();
+  });
+  document.getElementById("foodSearch").addEventListener("input", e=>{
+    const q = e.target.value.toLowerCase().trim();
+    const filtered = q ? FOOD_DB.filter(f=>f.name.toLowerCase().includes(q)) : FOOD_DB;
+    renderQuickList(filtered);
+  });
+  document.getElementById("addCustomBtn").addEventListener("click", addCustom);
+
+  document.querySelectorAll("#sexSeg button").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      document.querySelectorAll("#sexSeg button").forEach(x=>x.classList.remove("active"));
+      b.classList.add("active");
+    });
+  });
+  document.querySelectorAll("#goalSeg button").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      document.querySelectorAll("#goalSeg button").forEach(x=>x.classList.remove("active"));
+      b.classList.add("active");
+    });
+  });
+  ["pctProtein","pctCarbs","pctFat"].forEach(id=>{
+    document.getElementById(id).addEventListener("input", updateSplitTotal);
+  });
+  document.getElementById("calcBtn").addEventListener("click", calcTargets);
+  document.getElementById("saveTargetsBtn").addEventListener("click", saveTargets);
+
+  document.getElementById("weightForm").addEventListener("submit", async e=>{
+    e.preventDefault();
+    const input = document.getElementById("weightInput");
+    const kg = parseFloat(input.value);
+    if(!kg) return;
+    const dateStr = dkey(new Date());
+    const weights = (await getWeights()).filter(w=>w.date!==dateStr);
+    weights.push({date:dateStr, kg});
+    await sSet("weights", weights);
+    input.value = "";
+    profile.weightNow = kg;
+    await sSet("profile", profile);
+    renderProgress();
+    showToast("Weight logged");
+  });
+
+  /* ---- Diet plan ---- */
+  document.getElementById("addPlanBtn").addEventListener("click", ()=>openPlanModal());
+  document.getElementById("genPlanBtn").addEventListener("click", generatePlan);
+  document.getElementById("closePlan").addEventListener("click", closePlanModal);
+  document.getElementById("planBackdrop").addEventListener("click", e=>{
+    if(e.target.id==="planBackdrop") closePlanModal();
+  });
+  document.getElementById("planFoodSearch").addEventListener("input", e=>{
+    const q = e.target.value.toLowerCase().trim();
+    const filtered = q ? FOOD_DB.filter(f=>f.name.toLowerCase().includes(q)) : FOOD_DB;
+    renderPlanQuickList(filtered);
+  });
+  document.getElementById("savePlanItemBtn").addEventListener("click", savePlanItem);
+
+  /* ---- Alarms ---- */
+  document.getElementById("alarmToggle").addEventListener("change", async e=>{
+    profile.alarmsEnabled = e.target.checked;
+    await sSet("profile", profile);
+    updateAlarmStatusHint();
+    if(profile.alarmsEnabled){
+      if(window.Notification && Notification.permission==="default"){
+        Notification.requestPermission();
+      }
+      startAlarmChecker();
+      showToast("Meal alarms turned on");
+    }else{
+      stopAlarmChecker();
+      showToast("Meal alarms turned off");
+    }
+  });
+  document.getElementById("alarmDismissBtn").addEventListener("click", dismissAlarm);
+  document.getElementById("alarmSnoozeBtn").addEventListener("click", snoozeAlarm);
+
+  /* ---- Account / cloud sync ---- */
+  document.getElementById("openLoginBtn").addEventListener("click", openLoginModal);
+  document.getElementById("closeLogin").addEventListener("click", closeLoginModal);
+  document.getElementById("loginBackdrop").addEventListener("click", e=>{
+    if(e.target.id==="loginBackdrop") closeLoginModal();
+  });
+  document.getElementById("signInBtn").addEventListener("click", ()=>authAction("signin"));
+  document.getElementById("signUpBtn").addEventListener("click", ()=>authAction("signup"));
+  document.getElementById("signOutBtn").addEventListener("click", async ()=>{
+    if(fbAuth){ await fbAuth.signOut(); }
+    showToast("Signed out");
+  });
+}
+
+function openLoginModal(){
+  document.getElementById("loginError").style.display = "none";
+  const setupHint = document.getElementById("loginSetupHint");
+  const formWrap = document.getElementById("loginFormWrap");
+  if(!FIREBASE_READY){
+    setupHint.style.display = "block";
+    formWrap.style.display = "none";
+  }else{
+    setupHint.style.display = "none";
+    formWrap.style.display = "block";
+  }
+  document.getElementById("loginBackdrop").classList.add("active");
+}
+function closeLoginModal(){
+  document.getElementById("loginBackdrop").classList.remove("active");
+}
+
+async function authAction(mode){
+  if(!fbAuth) return;
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+  const errEl = document.getElementById("loginError");
+  errEl.style.display = "none";
+  if(!email || !password){
+    errEl.textContent = "Enter an email and password.";
+    errEl.style.display = "block";
+    return;
+  }
+  try{
+    if(mode==="signup"){
+      await fbAuth.createUserWithEmailAndPassword(email, password);
+      showToast("Account created — syncing your diary");
+    }else{
+      await fbAuth.signInWithEmailAndPassword(email, password);
+      showToast("Signed in — syncing your diary");
+    }
+    // onAuthStateChanged listener handles the rest (migration + re-render)
+  }catch(e){
+    errEl.textContent = friendlyAuthError(e);
+    errEl.style.display = "block";
+  }
+}
+function friendlyAuthError(e){
+  const code = e && e.code || "";
+  if(code.includes("email-already-in-use")) return "That email already has an account — try Sign In instead.";
+  if(code.includes("invalid-email")) return "That email address doesn't look valid.";
+  if(code.includes("weak-password")) return "Password should be at least 6 characters.";
+  if(code.includes("user-not-found") || code.includes("wrong-password") || code.includes("invalid-credential")) return "Incorrect email or password.";
+  if(code.includes("network-request-failed")) return "Network error — check your connection and try again.";
+  return "Something went wrong. Please try again.";
+}
+
+init();
+</script>
+</body>
+</html>
